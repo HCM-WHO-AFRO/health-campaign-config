@@ -17,33 +17,21 @@ ServiceMaps:
         - inJsonPath: $
           outJsonPath: $.Data
       timeStampField: $.lastModifiedTime
-  - topic: chad-save-project-beneficiary-topic
+  - topic: chad-transformer-producer-project-beneficiary-index-v1-topic
     configKey: INDEX
     indexes:
     - name: chad-project-beneficiary-index-v1
       type: project-beneficiary
-      id: $.clientReferenceId,$.beneficiaryClientReferenceId,$.tenantId
+      id: $.projectBeneficiary.clientReferenceId,$.projectBeneficiary.beneficiaryClientReferenceId,$.projectBeneficiary.tenantId
       isBulk: true
-      jsonPath: $.*
-      timeStampField: $.auditDetails.createdTime
-  - topic: chad-update-project-beneficiary-topic
-    configKey: INDEX
-    indexes:
-    - name: chad-project-beneficiary-index-v1
-      type: project-beneficiary
-      id: $.clientReferenceId,$.beneficiaryClientReferenceId,$.tenantId
-      isBulk: true
-      jsonPath: $.*
-      timeStampField: $.auditDetails.lastModifiedTime
-  - topic: chad-delete-project-beneficiary-topic
-    configKey: INDEX
-    indexes:
-    - name: chad-project-beneficiary-index-v1
-      type: project-beneficiary
-      id: $.clientReferenceId,$.beneficiaryClientReferenceId,$.tenantId
-      isBulk: true
-      jsonPath: $.*
-      timeStampField: $.auditDetails.lastModifiedTime
+      jsonPath: $
+      customJsonMapping:
+        indexMapping:
+          Data: { }
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.projectBeneficiary.clientAuditDetails.createdTime
   - topic: chad-save-project-resource-topic
     configKey: INDEX
     indexes:
