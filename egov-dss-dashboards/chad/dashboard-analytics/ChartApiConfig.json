@@ -62913,7 +62913,7 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.household.clientAuditDetails.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-household-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"Households Registered\":{\"value_count\":{\"field\":\"Data.household.id.keyword\"}}}}"
       }
@@ -62935,7 +62935,7 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Children Enumerated\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}"
       }
@@ -62957,7 +62957,7 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"Guest Members\":{\"filter\":{\"term\":{\"Data.additionalDetails.isGuestMember\":true}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}"
       }
@@ -62979,7 +62979,7 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"Gender Breakdown\":{\"terms\":{\"field\":\"Data.additionalDetails.gender.keyword\",\"size\":10}}}}"
       }
@@ -63003,7 +63003,7 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"Children By Age Band\":{\"range\":{\"field\":\"Data.additionalDetails.ageInMonths\",\"ranges\":[{\"key\":\"0-11 Months\",\"from\":0,\"to\":12},{\"key\":\"12-23 Months\",\"from\":12,\"to\":24},{\"key\":\"24-59 Months\",\"from\":24,\"to\":60}]},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}"
       }
@@ -63026,14 +63026,14 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"exists\":{\"field\":\"Data.boundaryHierarchy.healthCenter.keyword\"}},\"aggs\":{\"Enumerated\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthCenter.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Enumeration Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       },
       {
         "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-task-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}}]}},\"aggs\":{\"Vaccinated\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthCenter.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Vaccination Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
       }
@@ -63064,22 +63064,662 @@
     "insight": {},
     "_comment": " "
   },
+  "refusalsTotalCouldNotVaccinate": {
+    "chartName": "DSS_REFUSALS_TOTAL_COULD_NOT_VACCINATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Could Not Vaccinate\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":false}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Total Could Not Vaccinate"
+    ],
+    "insight": {
+      "chartResponseMap": "refusalsTotalCouldNotVaccinate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "negative",
+      "downwardIndicator": "positive",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#D43333",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "refusalsRefusalRate": {
+    "chartName": "DSS_REFUSALS_REFUSAL_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Refusal Count\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_FAILED\"}},{\"term\":{\"Data.additionalDetails.reason.keyword\":\"REFUSED\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Visited\":{\"filter\":{\"match_all\":{}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Refusal Count",
+      "Total Visited"
+    ],
+    "insight": {
+      "chartResponseMap": "refusalsRefusalRate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "negative",
+      "downwardIndicator": "positive",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#D43333",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "refusalsRefusalRateTrend": {
+    "chartName": "DSS_REFUSALS_REFUSAL_RATE_TREND",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_FAILED\"}},{\"term\":{\"Data.additionalDetails.reason.keyword\":\"REFUSED\"}}]}},\"aggs\":{\"Daily Refusals\":{\"date_histogram\":{\"field\":\"Data.taskDates\",\"calendar_interval\":\"day\",\"min_doc_count\":1},\"aggs\":{\"Day wise refusals\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Daily Refusals"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "refusalsAbsenceRate": {
+    "chartName": "DSS_REFUSALS_ABSENCE_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Absence Count\":{\"filter\":{\"bool\":{\"should\":[{\"term\":{\"Data.additionalDetails.reason.keyword\":\"ABSENCE\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"CLOSED_HOUSEHOLD\"}}],\"minimum_should_match\":1}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Visited\":{\"filter\":{\"match_all\":{}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Absence Count",
+      "Total Visited"
+    ],
+    "insight": {
+      "chartResponseMap": "refusalsAbsenceRate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "negative",
+      "downwardIndicator": "positive",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#D43333",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "refusalsAbsenceRateTrend": {
+    "chartName": "DSS_REFUSALS_ABSENCE_RATE_TREND",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"should\":[{\"term\":{\"Data.additionalDetails.reason.keyword\":\"ABSENCE\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"CLOSED_HOUSEHOLD\"}}],\"minimum_should_match\":1}},\"aggs\":{\"Daily Absences\":{\"date_histogram\":{\"field\":\"Data.taskDates\",\"calendar_interval\":\"day\",\"min_doc_count\":1},\"aggs\":{\"Day wise absences\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Daily Absences"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "refusalsRefusalReasonsBreakdown": {
+    "chartName": "DSS_REFUSALS_REFUSAL_REASONS_BREAKDOWN",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Refusal Reasons\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_FAILED\"}},{\"term\":{\"Data.additionalDetails.reason.keyword\":\"REFUSED\"}}]}},\"aggs\":{\"By Reason\":{\"terms\":{\"field\":\"Data.additionalDetails.refusalReason.keyword\",\"size\":20,\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "By Reason"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "refusalsAbsenceReasonsBreakdown": {
+    "chartName": "DSS_REFUSALS_ABSENCE_REASONS_BREAKDOWN",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Absence Reasons\":{\"filter\":{\"bool\":{\"should\":[{\"term\":{\"Data.additionalDetails.reason.keyword\":\"ABSENCE\"}},{\"term\":{\"Data.administrationStatus.keyword\":\"CLOSED_HOUSEHOLD\"}}],\"minimum_should_match\":1}},\"aggs\":{\"By Reason\":{\"terms\":{\"field\":\"Data.additionalDetails.absenceReason.keyword\",\"size\":20,\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "By Reason"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "refusalsRefusalRateByDistrict": {
+    "chartName": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_FAILED\"}},{\"term\":{\"Data.additionalDetails.reason.keyword\":\"REFUSED\"}}]}},\"aggs\":{\"Refusals by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Refusal Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"match_all\":{}},\"aggs\":{\"Total by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Visit Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "filterKeys": [],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "Districts",
+    "excludedColumns": [
+      "S.N.",
+      "Visit Count"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Visit Count"
+        ],
+        "newField": "Total Visits",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "PercentageComputedField",
+        "fields": [
+          "Refusal Count",
+          "Total Visits"
+        ],
+        "newField": "Refusal Rate (%)",
+        "_comments": ""
+      }
+    ],
+    "insight": {},
+    "hideInsights": true,
+    "hideHeaderDenomination": true,
+    "_comment": " "
+  },
+  "refusalsRefusalRateBySettlementType": {
+    "chartName": "DSS_REFUSALS_REFUSAL_RATE_BY_SETTLEMENT_TYPE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_FAILED\"}},{\"term\":{\"Data.additionalDetails.reason.keyword\":\"REFUSED\"}}]}},\"aggs\":{\"Refusals by Settlement Type\":{\"terms\":{\"field\":\"Data.additionalDetails.settlementType.keyword\",\"size\":20},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"match_all\":{}},\"aggs\":{\"Total by Settlement Type\":{\"terms\":{\"field\":\"Data.additionalDetails.settlementType.keyword\",\"size\":20},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Refusals by Settlement Type",
+      "Total by Settlement Type"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "zeroDoseChildrenIdentified": {
+    "chartName": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Zero Dose Children\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}},{\"range\":{\"Data.age\":{\"gt\":0}}}]}},\"aggs\":{\"count\":{\"cardinality\":{\"field\":\"Data.individualId.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Zero Dose Children"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "hardToReachVaccinationRate": {
+    "chartName": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Hard To Reach Vaccinated\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.deliveredTo.keyword\":\"INDIVIDUAL\"}},{\"terms\":{\"Data.additionalDetails.settlementType.keyword\":[\"HARD_TO_REACH\",\"NOMADIC\",\"REFUGEE\"]}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Hard To Reach Enumerated\":{\"filter\":{\"bool\":{\"must\":[{\"terms\":{\"Data.additionalDetails.settlementType.keyword\":[\"HARD_TO_REACH\",\"NOMADIC\",\"REFUGEE\"]}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "isCappedTillToday": true,
+    "aggregationPaths": [
+      "Hard To Reach Vaccinated",
+      "Hard To Reach Enumerated"
+    ],
+    "insight": {
+      "chartResponseMap": "hardToReachVaccinationRate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "coverageTotalChildrenVaccinated": {
+    "chartName": "DSS_COVERAGE_TOTAL_CHILDREN_VACCINATED",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Children Vaccinated\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Total Children Vaccinated"
+    ],
+    "insight": {
+      "chartResponseMap": "coverageTotalChildrenVaccinated",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "coverageOverallCoverageRate": {
+    "chartName": "DSS_COVERAGE_OVERALL_COVERAGE_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Vaccinated\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Vaccination Target\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"count\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Total Vaccinated",
+      "Vaccination Target"
+    ],
+    "insight": {
+      "chartResponseMap": "coverageOverallCoverageRate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "coverageHealthFacilityCoverageRate": {
+    "chartName": "DSS_COVERAGE_HEALTH_FACILITY_COVERAGE_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Facilities Covered\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"count\":{\"cardinality\":{\"field\":\"Data.boundaryHierarchy.healthCenter.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Facilities Target\":{\"filter\":{\"bool\":{\"must\":[{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"count\":{\"cardinality\":{\"field\":\"Data.boundaryHierarchy.healthCenter.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Facilities Covered",
+      "Total Facilities Target"
+    ],
+    "insight": {
+      "chartResponseMap": "coverageHealthFacilityCoverageRate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "coverageDailyRate": {
+    "chartName": "DSS_COVERAGE_DAILY_VACCINATION_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Daily Vaccination Rate\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "filterForCurrentDay": true,
+    "aggregationPaths": [
+      "Daily Vaccination Rate"
+    ],
+    "insight": {
+      "chartResponseMap": "coverageDailyRate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "coverageCampaignCompletionForecast": {
+    "chartName": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"Daily Vaccinations\":{\"date_histogram\":{\"field\":\"Data.taskDates\",\"calendar_interval\":\"day\",\"min_doc_count\":1},\"aggs\":{\"Day wise vaccinations\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"chartSpecificProperty\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"startDate\":{\"terms\":{\"field\":\"Data.startDate\"}},\"endDate\":{\"terms\":{\"field\":\"Data.endDate\"}},\"Vaccination Target\":{\"date_histogram\":{\"field\":\"Data.startDate\",\"calendar_interval\":\"day\"},\"aggs\":{\"Target\":{\"sum\":{\"field\":\"Data.targetPerDay\"}}}},\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": true,
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "predictionPath": "Vaccination Target",
+    "distributionPath": "Daily Vaccinations",
+    "cappedTarget": "Overall Target",
+    "showPercentageValue": true,
+    "aggregationPaths": [
+      "Daily Vaccinations",
+      "Vaccination Target"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "coverageDistrictPerformanceSummary": {
+    "chartName": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"District Target\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"Children Vaccinated by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Vaccinated Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "filterKeys": [],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "Districts",
+    "excludedColumns": [
+      "S.N.",
+      "Overall Target"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Overall Target"
+        ],
+        "newField": "Vaccination Target",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "PercentageComputedField",
+        "fields": [
+          "Vaccinated Count",
+          "Vaccination Target"
+        ],
+        "newField": "Coverage Rate (%)",
+        "_comments": ""
+      }
+    ],
+    "insight": {},
+    "hideInsights": true,
+    "hideHeaderDenomination": true,
+    "_comment": " "
+  },
+  "refusalsRevisitCompletionRate": {
+    "chartName": "DSS_REFUSALS_REVISIT_COMPLETION_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Revisit Count\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.administrationStatus.keyword\":\"VISITED\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Missed Count\":{\"filter\":{\"bool\":{\"must\":[{\"terms\":{\"Data.administrationStatus.keyword\":[\"CLOSED_HOUSEHOLD\",\"ADMINISTRATION_FAILED\"]}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Revisit Count",
+      "Missed Count"
+    ],
+    "insight": {
+      "chartResponseMap": "refusalsRevisitCompletionRate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "refusalsUnresolvedMissedChildren": {
+    "chartName": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Unresolved Missed Children\":{\"filter\":{\"bool\":{\"must\":[{\"terms\":{\"Data.administrationStatus.keyword\":[\"CLOSED_HOUSEHOLD\",\"ADMINISTRATION_FAILED\"]}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Unresolved Missed Children"
+    ],
+    "insight": {
+      "chartResponseMap": "refusalsUnresolvedMissedChildren",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "negative",
+      "downwardIndicator": "positive",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#D43333",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
   "coverageBySettlementTypeEnumeration": {
     "chartName": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
     "queries": [
       {
         "module": "COMMON",
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"Children Enumerated\":{\"terms\":{\"field\":\"Data.additionalDetails.settlementType.keyword\",\"size\":20},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}"
       },
       {
         "module": "COMMON",
-        "dateRefField": "Data.createdTime",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\"}",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}}]}},\"aggs\":{\"Children Vaccinated\":{\"terms\":{\"field\":\"Data.additionalDetails.settlementType.keyword\",\"size\":20},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"Children Vaccinated\":{\"terms\":{\"field\":\"Data.additionalDetails.settlementType.keyword\",\"size\":20},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}}"
       }
     ],
     "chartType": "line",
@@ -63094,6 +63734,256 @@
       "Children Vaccinated"
     ],
     "insight": {},
+    "_comment": " "
+  },
+  "polioGpsFixRate": {
+    "chartName": "DSS_POLIO_GPS_FIX_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"GPS Records\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.additionalDetails.latitude\"}},{\"exists\":{\"field\":\"Data.additionalDetails.longitude\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Records\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "GPS Records",
+      "Total Records"
+    ],
+    "insight": {
+      "chartResponseMap": "polioGpsFixRate",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "polioGpsFixRateTrend": {
+    "chartName": "DSS_POLIO_GPS_FIX_RATE_TREND",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.additionalDetails.latitude\"}},{\"exists\":{\"field\":\"Data.additionalDetails.longitude\"}}]}},\"aggs\":{\"Records With GPS\":{\"date_histogram\":{\"field\":\"Data.taskDates\",\"calendar_interval\":\"day\",\"min_doc_count\":1},\"aggs\":{\"Day wise GPS Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}}],\"must_not\":[{\"exists\":{\"field\":\"Data.additionalDetails.latitude\"}}]}},\"aggs\":{\"Records Without GPS\":{\"date_histogram\":{\"field\":\"Data.taskDates\",\"calendar_interval\":\"day\",\"min_doc_count\":1},\"aggs\":{\"Day wise No GPS Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "line",
+    "isCumulative": false,
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Records With GPS",
+      "Records Without GPS"
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "polioAvgGpsAccuracy": {
+    "chartName": "DSS_POLIO_AVG_GPS_ACCURACY",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Avg GPS Accuracy (m)\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.additionalDetails.locationAccuracy.keyword\"}}]}},\"aggs\":{\"count\":{\"avg\":{\"script\":{\"source\":\"Double.parseDouble(doc['Data.additionalDetails.locationAccuracy.keyword'].value)\",\"lang\":\"painless\"}}}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "Avg GPS Accuracy (m)"
+    ],
+    "insight": {},
+    "hideInsights": true,
+    "_comment": " "
+  },
+  "polioGpsAccuracyFlagged": {
+    "chartName": "DSS_POLIO_GPS_ACCURACY_FLAGGED",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"script\":{\"script\":{\"source\":\"doc['Data.additionalDetails.locationAccuracy.keyword'].size() > 0 && Double.parseDouble(doc['Data.additionalDetails.locationAccuracy.keyword'].value) > 50\",\"lang\":\"painless\"}}}]}},\"aggs\":{\"Flagged Records\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Flagged Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.additionalDetails.locationAccuracy.keyword\"}}]}},\"aggs\":{\"Total GPS Records\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Total GPS Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "filterKeys": [
+      {
+        "key": "district",
+        "column": "District"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "Districts",
+    "excludedColumns": [
+      "S.N.",
+      "Flagged Count",
+      "Total GPS Count"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "PercentageComputedField",
+        "fields": [
+          "Flagged Count",
+          "Total GPS Count"
+        ],
+        "newField": "Flagged Rate (> 50m) %",
+        "_comments": ""
+      }
+    ],
+    "insight": {},
+    "_comment": " "
+  },
+  "polioFormCompletenessScore": {
+    "chartName": "DSS_POLIO_FORM_COMPLETENESS_SCORE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Complete Records\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.projectBeneficiaryClientReferenceId.keyword\"}},{\"exists\":{\"field\":\"Data.deliveredTo.keyword\"}},{\"exists\":{\"field\":\"Data.additionalDetails.doseIndex\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Records\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}"
+      }
+    ],
+    "chartType": "metric",
+    "valueType": "percentage",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "percentage",
+    "aggregationPaths": [
+      "Complete Records",
+      "Total Records"
+    ],
+    "insight": {
+      "chartResponseMap": "polioFormCompletenessScore",
+      "action": "differenceOfNumbers",
+      "upwardIndicator": "positive",
+      "downwardIndicator": "negative",
+      "textMessage": "$indicator$value% than last $insightInterval",
+      "colorCode": "#228B22",
+      "insightInterval": "dateRange"
+    },
+    "_comment": " "
+  },
+  "polioFormCompletenessFieldBreakdown": {
+    "chartName": "DSS_POLIO_FORM_COMPLETENESS_FIELD_BREAKDOWN",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}}]}},\"aggs\":{\"Total Delivery Records\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Total Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.projectBeneficiaryClientReferenceId.keyword\"}},{\"exists\":{\"field\":\"Data.deliveredTo.keyword\"}},{\"exists\":{\"field\":\"Data.additionalDetails.doseIndex\"}}]}},\"aggs\":{\"Complete Records\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Complete Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"province\":\"Data.boundaryHierarchy.province.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.additionalDetails.latitude\"}},{\"exists\":{\"field\":\"Data.additionalDetails.longitude\"}}]}},\"aggs\":{\"GPS Records by District\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"GPS Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "filterKeys": [
+      {
+        "key": "district",
+        "column": "District"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "Districts",
+    "excludedColumns": [
+      "S.N.",
+      "Total Count",
+      "Complete Count",
+      "GPS Count"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "PercentageComputedField",
+        "fields": [
+          "GPS Count",
+          "Total Count"
+        ],
+        "newField": "GPS Fix Rate (%)",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "PercentageComputedField",
+        "fields": [
+          "Complete Count",
+          "Total Count"
+        ],
+        "newField": "Form Completeness (%)",
+        "_comments": ""
+      }
+    ],
+    "insight": {},
+    "hideInsights": true,
+    "hideHeaderDenomination": true,
     "_comment": " "
   }
 
