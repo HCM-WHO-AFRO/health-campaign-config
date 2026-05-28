@@ -9304,6 +9304,992 @@
       "visualizations": [
         {
           "row": 1,
+          "name": "DSS_HEALTH_COVERAGE",
+          "vizArray": [
+            {
+              "id": 820,
+              "name": "DSS_COVERAGE_TOTAL_CHILDREN_VACCINATED",
+              "label": "DSS_COVERAGE_TOTAL_CHILDREN_VACCINATED",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageTotalChildrenVaccinated",
+                  "name": "DSS_COVERAGE_TOTAL_CHILDREN_VACCINATED",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 821,
+              "name": "DSS_COVERAGE_OVERALL_COVERAGE_RATE",
+              "label": "DSS_COVERAGE_OVERALL_COVERAGE_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": false,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageOverallCoverageRate",
+                  "name": "DSS_COVERAGE_OVERALL_COVERAGE_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 822,
+              "name": "DSS_COVERAGE_HEALTH_FACILITY_COVERAGE_RATE",
+              "label": "DSS_COVERAGE_HEALTH_FACILITY_COVERAGE_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": false,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageHealthFacilityCoverageRate",
+                  "name": "DSS_COVERAGE_HEALTH_FACILITY_COVERAGE_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_COVERAGE",
+          "vizArray": [
+            {
+              "id": 823,
+              "name": "DSS_COVERAGE_DAILY_VACCINATION_RATE",
+              "label": "DSS_COVERAGE_DAILY_VACCINATION_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageDailyRate",
+                  "name": "DSS_COVERAGE_DAILY_VACCINATION_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_COVERAGE",
+          "vizArray": [
+            {
+              "id": 824,
+              "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
+              "label": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageCampaignCompletionForecast",
+                  "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
+                  "code": "",
+                  "chartType": "line",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "name": "DSS_HEALTH_COVERAGE",
+          "vizArray": [
+            {
+              "id": 825,
+              "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
+              "label": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageDistrictPerformanceSummary",
+                  "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 811,
+              "name": "DSS_HEALTH_HOUSEHOLDS_REGISTERED_IN_ENUMERATION",
+              "label": "DSS_HEALTH_HOUSEHOLDS_REGISTERED_IN_ENUMERATION",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "householdsRegisteredInEnumeration",
+                  "name": "DSS_HEALTH_HOUSEHOLDS_REGISTERED_IN_ENUMERATION",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 812,
+              "name": "DSS_HEALTH_TOTAL_CHILDREN_ENUMERATED",
+              "label": "DSS_HEALTH_TOTAL_CHILDREN_ENUMERATED",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "totalChildrenEnumeratedEnumeration",
+                  "name": "DSS_HEALTH_TOTAL_CHILDREN_ENUMERATED",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 813,
+              "name": "DSS_HEALTH_GUEST_MEMBER_COUNT",
+              "label": "DSS_HEALTH_GUEST_MEMBER_COUNT",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "guestMemberCountEnumeration",
+                  "name": "DSS_HEALTH_GUEST_MEMBER_COUNT",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 830,
+              "name": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
+              "label": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "zeroDoseChildrenIdentified",
+                  "name": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 831,
+              "name": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
+              "label": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": false,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "hardToReachVaccinationRate",
+                  "name": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 815,
+              "name": "DSS_HEALTH_GENDER_BREAKDOWN",
+              "label": "DSS_HEALTH_GENDER_BREAKDOWN",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "genderBreakdownEnumeration",
+                  "name": "DSS_HEALTH_GENDER_BREAKDOWN_ENUMERATION",
+                  "code": "",
+                  "chartType": "donut",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 816,
+              "name": "DSS_HEALTH_CHILDREN_BY_AGE_BAND",
+              "label": "DSS_HEALTH_CHILDREN_BY_AGE_BAND",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "childrenByAgeBandEnumeration",
+                  "name": "DSS_HEALTH_CHILDREN_BY_AGE_BAND_ENUMERATION",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 817,
+              "name": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
+              "label": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "enumeratedNotVaccinatedEnumeration",
+                  "name": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 818,
+              "name": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
+              "label": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageBySettlementTypeEnumeration",
+                  "name": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
+                  "code": "",
+                  "chartType": "sideBySideBar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_POLIO_TEAM_PERFORMANCE",
+          "vizArray": [
+            {
+              "id": 872,
+              "name": "DSS_POLIO_TEAM_SYNC_RATE",
+              "label": "DSS_POLIO_TEAM_SYNC_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioTeamSyncRate",
+                  "name": "DSS_POLIO_TEAM_SYNC_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_POLIO_TEAM_PERFORMANCE",
+          "vizArray": [
+            {
+              "id": 873,
+              "name": "DSS_POLIO_CHILDREN_VACCINATED_PER_TEAM",
+              "label": "DSS_POLIO_CHILDREN_VACCINATED_PER_TEAM",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioChildrenVaccinatedPerTeam",
+                  "name": "DSS_POLIO_CHILDREN_VACCINATED_PER_TEAM",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_POLIO_TEAM_PERFORMANCE",
+          "vizArray": [
+            {
+              "id": 874,
+              "name": "DSS_POLIO_TEAM_DAILY_SUBMISSION_VELOCITY",
+              "label": "DSS_POLIO_TEAM_DAILY_SUBMISSION_VELOCITY",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioTeamDailySubmissionVelocity",
+                  "name": "DSS_POLIO_TEAM_DAILY_SUBMISSION_VELOCITY",
+                  "code": "",
+                  "chartType": "line",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 875,
+              "name": "DSS_POLIO_TEAM_SUBMISSION_RATE_OUTLIER",
+              "label": "DSS_POLIO_TEAM_SUBMISSION_RATE_OUTLIER",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioTeamSubmissionRateOutlier",
+                  "name": "DSS_POLIO_TEAM_SUBMISSION_RATE_OUTLIER",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_REFUSALS",
+          "vizArray": [
+            {
+              "id": 850,
+              "name": "DSS_REFUSALS_TOTAL_COULD_NOT_VACCINATE",
+              "label": "DSS_REFUSALS_TOTAL_COULD_NOT_VACCINATE",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsTotalCouldNotVaccinate",
+                  "name": "DSS_REFUSALS_TOTAL_COULD_NOT_VACCINATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 851,
+              "name": "DSS_REFUSALS_REFUSAL_RATE",
+              "label": "DSS_REFUSALS_REFUSAL_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsRefusalRate",
+                  "name": "DSS_REFUSALS_REFUSAL_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 852,
+              "name": "DSS_REFUSALS_ABSENCE_RATE",
+              "label": "DSS_REFUSALS_ABSENCE_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsAbsenceRate",
+                  "name": "DSS_REFUSALS_ABSENCE_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_REFUSALS",
+          "vizArray": [
+            {
+              "id": 859,
+              "name": "DSS_REFUSALS_REVISIT_COMPLETION_RATE",
+              "label": "DSS_REFUSALS_REVISIT_COMPLETION_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": false,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsRevisitCompletionRate",
+                  "name": "DSS_REFUSALS_REVISIT_COMPLETION_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 860,
+              "name": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
+              "label": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
+              "vizType": "stacked-collection",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsUnresolvedMissedChildren",
+                  "name": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_REFUSALS",
+          "vizArray": [
+            {
+              "id": 853,
+              "name": "DSS_REFUSALS_REFUSAL_RATE_TREND",
+              "label": "DSS_REFUSALS_REFUSAL_RATE_TREND",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsRefusalRateTrend",
+                  "name": "DSS_REFUSALS_REFUSAL_RATE_TREND",
+                  "code": "",
+                  "chartType": "line",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 854,
+              "name": "DSS_REFUSALS_ABSENCE_RATE_TREND",
+              "label": "DSS_REFUSALS_ABSENCE_RATE_TREND",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsAbsenceRateTrend",
+                  "name": "DSS_REFUSALS_ABSENCE_RATE_TREND",
+                  "code": "",
+                  "chartType": "line",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "name": "DSS_HEALTH_REFUSALS",
+          "vizArray": [
+            {
+              "id": 855,
+              "name": "DSS_REFUSALS_REFUSAL_REASONS_BREAKDOWN",
+              "label": "DSS_REFUSALS_REFUSAL_REASONS_BREAKDOWN",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsRefusalReasonsBreakdown",
+                  "name": "DSS_REFUSALS_REFUSAL_REASONS_BREAKDOWN",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 856,
+              "name": "DSS_REFUSALS_ABSENCE_REASONS_BREAKDOWN",
+              "label": "DSS_REFUSALS_ABSENCE_REASONS_BREAKDOWN",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsAbsenceReasonsBreakdown",
+                  "name": "DSS_REFUSALS_ABSENCE_REASONS_BREAKDOWN",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "name": "DSS_HEALTH_REFUSALS",
+          "vizArray": [
+            {
+              "id": 857,
+              "name": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
+              "label": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsRefusalRateByDistrict",
+                  "name": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "name": "DSS_HEALTH_REFUSALS",
+          "vizArray": [
+            {
+              "id": 858,
+              "name": "DSS_REFUSALS_REFUSAL_RATE_BY_SETTLEMENT_TYPE",
+              "label": "DSS_REFUSALS_REFUSAL_RATE_BY_SETTLEMENT_TYPE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "refusalsRefusalRateBySettlementType",
+                  "name": "DSS_REFUSALS_REFUSAL_RATE_BY_SETTLEMENT_TYPE",
+                  "code": "",
+                  "chartType": "sideBySideBar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
+          "vizArray": [
+            {
+              "id": 861,
+              "name": "DSS_POLIO_GPS_FIX_RATE",
+              "label": "DSS_POLIO_GPS_FIX_RATE",
+              "vizType": "stacked-collection",
+              "noUnit": false,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioGpsFixRate",
+                  "name": "DSS_POLIO_GPS_FIX_RATE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 864,
+              "name": "DSS_POLIO_FORM_COMPLETENESS_SCORE",
+              "label": "DSS_POLIO_FORM_COMPLETENESS_SCORE",
+              "vizType": "stacked-collection",
+              "noUnit": false,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioFormCompletenessScore",
+                  "name": "DSS_POLIO_FORM_COMPLETENESS_SCORE",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
+          "vizArray": [
+            {
+              "id": 862,
+              "name": "DSS_POLIO_GPS_FIX_RATE_TREND",
+              "label": "DSS_POLIO_GPS_FIX_RATE_TREND",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioGpsFixRateTrend",
+                  "name": "DSS_POLIO_GPS_FIX_RATE_TREND",
+                  "code": "",
+                  "chartType": "line",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
+          "vizArray": [
+            {
+              "id": 863,
+              "name": "DSS_POLIO_AVG_GPS_ACCURACY",
+              "label": "DSS_POLIO_AVG_GPS_ACCURACY",
+              "vizType": "stacked-collection",
+              "noUnit": false,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioAvgGpsAccuracy",
+                  "name": "DSS_POLIO_AVG_GPS_ACCURACY",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
+          "vizArray": [
+            {
+              "id": 866,
+              "name": "DSS_POLIO_GPS_ACCURACY_FLAGGED",
+              "label": "DSS_POLIO_GPS_ACCURACY_FLAGGED",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioGpsAccuracyFlagged",
+                  "name": "DSS_POLIO_GPS_ACCURACY_FLAGGED",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 5,
+          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
+          "vizArray": [
+            {
+              "id": 865,
+              "name": "DSS_POLIO_FORM_COMPLETENESS_FIELD_BREAKDOWN",
+              "label": "DSS_POLIO_FORM_COMPLETENESS_FIELD_BREAKDOWN",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioFormCompletenessFieldBreakdown",
+                  "name": "DSS_POLIO_FORM_COMPLETENESS_FIELD_BREAKDOWN",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_POLIO_INVENTORY",
+          "vizArray": [
+            {
+              "id": 867,
+              "name": "DSS_POLIO_VIALS_ISSUED_BY_TEAM",
+              "label": "DSS_POLIO_VIALS_ISSUED_BY_TEAM",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioVialsIssuedByDistrict",
+                  "name": "DSS_POLIO_VIALS_ISSUED_BY_TEAM",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 868,
+              "name": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
+              "label": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioDosesAdministeredByDistrict",
+                  "name": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_POLIO_INVENTORY",
+          "vizArray": [
+            {
+              "id": 869,
+              "name": "DSS_POLIO_STOCK_RECONCILIATION_RATE",
+              "label": "DSS_POLIO_STOCK_RECONCILIATION_RATE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioStockReconciliationRate",
+                  "name": "DSS_POLIO_STOCK_RECONCILIATION_RATE",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_POLIO_INVENTORY",
+          "vizArray": [
+            {
+              "id": 870,
+              "name": "DSS_POLIO_WASTAGE_RATE",
+              "label": "DSS_POLIO_WASTAGE_RATE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioWastageRate",
+                  "name": "DSS_POLIO_WASTAGE_RATE",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 871,
+              "name": "DSS_POLIO_STOCK_OUT_RISK",
+              "label": "DSS_POLIO_STOCK_OUT_RISK",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioStockOutRisk",
+                  "name": "DSS_POLIO_STOCK_OUT_RISK",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 6,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 876,
+              "name": "DSS_POLIO_ENUMERATION_DAY_WISE",
+              "label": "DSS_POLIO_ENUMERATION_DAY_WISE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioEnumerationDayWise",
+                  "name": "DSS_POLIO_ENUMERATION_DAY_WISE",
+                  "code": "",
+                  "chartType": "line",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            },
+            {
+              "id": 878,
+              "name": "DSS_POLIO_NEW_SETTLEMENTS_IDENTIFIED",
+              "label": "DSS_POLIO_NEW_SETTLEMENTS_IDENTIFIED",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioNewSettlementsIdentified",
+                  "name": "DSS_POLIO_NEW_SETTLEMENTS_IDENTIFIED",
+                  "code": "",
+                  "chartType": "line",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 7,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 877,
+              "name": "DSS_POLIO_ENUMERATION_COVERAGE_BY_SETTLEMENT",
+              "label": "DSS_POLIO_ENUMERATION_COVERAGE_BY_SETTLEMENT",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioEnumerationCoverageBySettlement",
+                  "name": "DSS_POLIO_ENUMERATION_COVERAGE_BY_SETTLEMENT",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 879,
+              "name": "DSS_POLIO_POPULATION_PYRAMID",
+              "label": "DSS_POLIO_POPULATION_PYRAMID",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioPopulationPyramid",
+                  "name": "DSS_POLIO_POPULATION_PYRAMID",
+                  "code": "",
+                  "chartType": "sideBySideBar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "_disabled_visualizations": [
+        {
+          "row": 1,
           "name": "DSS_HEALTH_OVERVIEW",
           "vizArray": [
             {
@@ -10845,702 +11831,6 @@
                   "moduleName": "iccd",
                   "pageName": "custom-chart",
                   "chartType": "kibanaComponent",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 1,
-          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
-          "vizArray": [
-            {
-              "id": 811,
-              "name": "DSS_HEALTH_HOUSEHOLDS_REGISTERED_IN_ENUMERATION",
-              "label": "DSS_HEALTH_HOUSEHOLDS_REGISTERED_IN_ENUMERATION",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "householdsRegisteredInEnumeration",
-                  "name": "DSS_HEALTH_HOUSEHOLDS_REGISTERED_IN_ENUMERATION",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 812,
-              "name": "DSS_HEALTH_TOTAL_CHILDREN_ENUMERATED",
-              "label": "DSS_HEALTH_TOTAL_CHILDREN_ENUMERATED",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "totalChildrenEnumeratedEnumeration",
-                  "name": "DSS_HEALTH_TOTAL_CHILDREN_ENUMERATED",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 813,
-              "name": "DSS_HEALTH_GUEST_MEMBER_COUNT",
-              "label": "DSS_HEALTH_GUEST_MEMBER_COUNT",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "guestMemberCountEnumeration",
-                  "name": "DSS_HEALTH_GUEST_MEMBER_COUNT",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
-          "vizArray": [
-            {
-              "id": 830,
-              "name": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
-              "label": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "zeroDoseChildrenIdentified",
-                  "name": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 831,
-              "name": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
-              "label": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "hardToReachVaccinationRate",
-                  "name": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 3,
-          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
-          "vizArray": [
-            {
-              "id": 815,
-              "name": "DSS_HEALTH_GENDER_BREAKDOWN",
-              "label": "DSS_HEALTH_GENDER_BREAKDOWN",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "genderBreakdownEnumeration",
-                  "name": "DSS_HEALTH_GENDER_BREAKDOWN_ENUMERATION",
-                  "code": "",
-                  "chartType": "donut",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 816,
-              "name": "DSS_HEALTH_CHILDREN_BY_AGE_BAND",
-              "label": "DSS_HEALTH_CHILDREN_BY_AGE_BAND",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "childrenByAgeBandEnumeration",
-                  "name": "DSS_HEALTH_CHILDREN_BY_AGE_BAND_ENUMERATION",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 4,
-          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
-          "vizArray": [
-            {
-              "id": 817,
-              "name": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
-              "label": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "enumeratedNotVaccinatedEnumeration",
-                  "name": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 5,
-          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
-          "vizArray": [
-            {
-              "id": 818,
-              "name": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
-              "label": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "coverageBySettlementTypeEnumeration",
-                  "name": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
-                  "code": "",
-                  "chartType": "sideBySideBar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 1,
-          "name": "DSS_HEALTH_COVERAGE",
-          "vizArray": [
-            {
-              "id": 820,
-              "name": "DSS_COVERAGE_TOTAL_CHILDREN_VACCINATED",
-              "label": "DSS_COVERAGE_TOTAL_CHILDREN_VACCINATED",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "coverageTotalChildrenVaccinated",
-                  "name": "DSS_COVERAGE_TOTAL_CHILDREN_VACCINATED",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 821,
-              "name": "DSS_COVERAGE_OVERALL_COVERAGE_RATE",
-              "label": "DSS_COVERAGE_OVERALL_COVERAGE_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "coverageOverallCoverageRate",
-                  "name": "DSS_COVERAGE_OVERALL_COVERAGE_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 822,
-              "name": "DSS_COVERAGE_HEALTH_FACILITY_COVERAGE_RATE",
-              "label": "DSS_COVERAGE_HEALTH_FACILITY_COVERAGE_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "coverageHealthFacilityCoverageRate",
-                  "name": "DSS_COVERAGE_HEALTH_FACILITY_COVERAGE_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_COVERAGE",
-          "vizArray": [
-            {
-              "id": 823,
-              "name": "DSS_COVERAGE_DAILY_VACCINATION_RATE",
-              "label": "DSS_COVERAGE_DAILY_VACCINATION_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "coverageDailyRate",
-                  "name": "DSS_COVERAGE_DAILY_VACCINATION_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 3,
-          "name": "DSS_HEALTH_COVERAGE",
-          "vizArray": [
-            {
-              "id": 824,
-              "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
-              "label": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "coverageCampaignCompletionForecast",
-                  "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
-                  "code": "",
-                  "chartType": "line",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 4,
-          "name": "DSS_HEALTH_COVERAGE",
-          "vizArray": [
-            {
-              "id": 825,
-              "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
-              "label": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "coverageDistrictPerformanceSummary",
-                  "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 1,
-          "name": "DSS_HEALTH_REFUSALS",
-          "vizArray": [
-            {
-              "id": 850,
-              "name": "DSS_REFUSALS_TOTAL_COULD_NOT_VACCINATE",
-              "label": "DSS_REFUSALS_TOTAL_COULD_NOT_VACCINATE",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsTotalCouldNotVaccinate",
-                  "name": "DSS_REFUSALS_TOTAL_COULD_NOT_VACCINATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 851,
-              "name": "DSS_REFUSALS_REFUSAL_RATE",
-              "label": "DSS_REFUSALS_REFUSAL_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsRefusalRate",
-                  "name": "DSS_REFUSALS_REFUSAL_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 852,
-              "name": "DSS_REFUSALS_ABSENCE_RATE",
-              "label": "DSS_REFUSALS_ABSENCE_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsAbsenceRate",
-                  "name": "DSS_REFUSALS_ABSENCE_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_REFUSALS",
-          "vizArray": [
-            {
-              "id": 859,
-              "name": "DSS_REFUSALS_REVISIT_COMPLETION_RATE",
-              "label": "DSS_REFUSALS_REVISIT_COMPLETION_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsRevisitCompletionRate",
-                  "name": "DSS_REFUSALS_REVISIT_COMPLETION_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 860,
-              "name": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
-              "label": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsUnresolvedMissedChildren",
-                  "name": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 3,
-          "name": "DSS_HEALTH_REFUSALS",
-          "vizArray": [
-            {
-              "id": 853,
-              "name": "DSS_REFUSALS_REFUSAL_RATE_TREND",
-              "label": "DSS_REFUSALS_REFUSAL_RATE_TREND",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsRefusalRateTrend",
-                  "name": "DSS_REFUSALS_REFUSAL_RATE_TREND",
-                  "code": "",
-                  "chartType": "line",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 854,
-              "name": "DSS_REFUSALS_ABSENCE_RATE_TREND",
-              "label": "DSS_REFUSALS_ABSENCE_RATE_TREND",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsAbsenceRateTrend",
-                  "name": "DSS_REFUSALS_ABSENCE_RATE_TREND",
-                  "code": "",
-                  "chartType": "line",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 4,
-          "name": "DSS_HEALTH_REFUSALS",
-          "vizArray": [
-            {
-              "id": 855,
-              "name": "DSS_REFUSALS_REFUSAL_REASONS_BREAKDOWN",
-              "label": "DSS_REFUSALS_REFUSAL_REASONS_BREAKDOWN",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsRefusalReasonsBreakdown",
-                  "name": "DSS_REFUSALS_REFUSAL_REASONS_BREAKDOWN",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 856,
-              "name": "DSS_REFUSALS_ABSENCE_REASONS_BREAKDOWN",
-              "label": "DSS_REFUSALS_ABSENCE_REASONS_BREAKDOWN",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsAbsenceReasonsBreakdown",
-                  "name": "DSS_REFUSALS_ABSENCE_REASONS_BREAKDOWN",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 5,
-          "name": "DSS_HEALTH_REFUSALS",
-          "vizArray": [
-            {
-              "id": 857,
-              "name": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
-              "label": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsRefusalRateByDistrict",
-                  "name": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 6,
-          "name": "DSS_HEALTH_REFUSALS",
-          "vizArray": [
-            {
-              "id": 858,
-              "name": "DSS_REFUSALS_REFUSAL_RATE_BY_SETTLEMENT_TYPE",
-              "label": "DSS_REFUSALS_REFUSAL_RATE_BY_SETTLEMENT_TYPE",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "refusalsRefusalRateBySettlementType",
-                  "name": "DSS_REFUSALS_REFUSAL_RATE_BY_SETTLEMENT_TYPE",
-                  "code": "",
-                  "chartType": "sideBySideBar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 1,
-          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
-          "vizArray": [
-            {
-              "id": 861,
-              "name": "DSS_POLIO_GPS_FIX_RATE",
-              "label": "DSS_POLIO_GPS_FIX_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioGpsFixRate",
-                  "name": "DSS_POLIO_GPS_FIX_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
-              "id": 864,
-              "name": "DSS_POLIO_FORM_COMPLETENESS_SCORE",
-              "label": "DSS_POLIO_FORM_COMPLETENESS_SCORE",
-              "vizType": "stacked-collection",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioFormCompletenessScore",
-                  "name": "DSS_POLIO_FORM_COMPLETENESS_SCORE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
-          "vizArray": [
-            {
-              "id": 862,
-              "name": "DSS_POLIO_GPS_FIX_RATE_TREND",
-              "label": "DSS_POLIO_GPS_FIX_RATE_TREND",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioGpsFixRateTrend",
-                  "name": "DSS_POLIO_GPS_FIX_RATE_TREND",
-                  "code": "",
-                  "chartType": "line",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 3,
-          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
-          "vizArray": [
-            {
-              "id": 863,
-              "name": "DSS_POLIO_AVG_GPS_ACCURACY",
-              "label": "DSS_POLIO_AVG_GPS_ACCURACY",
-              "vizType": "stacked-collection",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioAvgGpsAccuracy",
-                  "name": "DSS_POLIO_AVG_GPS_ACCURACY",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 4,
-          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
-          "vizArray": [
-            {
-              "id": 866,
-              "name": "DSS_POLIO_GPS_ACCURACY_FLAGGED",
-              "label": "DSS_POLIO_GPS_ACCURACY_FLAGGED",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioGpsAccuracyFlagged",
-                  "name": "DSS_POLIO_GPS_ACCURACY_FLAGGED",
-                  "code": "",
-                  "chartType": "table",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 5,
-          "name": "DSS_HEALTH_DATA_QUALITY_POLIO",
-          "vizArray": [
-            {
-              "id": 865,
-              "name": "DSS_POLIO_FORM_COMPLETENESS_FIELD_BREAKDOWN",
-              "label": "DSS_POLIO_FORM_COMPLETENESS_FIELD_BREAKDOWN",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioFormCompletenessFieldBreakdown",
-                  "name": "DSS_POLIO_FORM_COMPLETENESS_FIELD_BREAKDOWN",
-                  "code": "",
-                  "chartType": "table",
                   "filter": "",
                   "headers": []
                 }
