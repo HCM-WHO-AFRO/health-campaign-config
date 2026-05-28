@@ -16,10 +16,10 @@ ServiceMaps:
               - inJsonPath: $
                 outJsonPath: $.Data
           timeStampField: $.userAction.clientAuditDetails.lastModifiedTime
-    - topic: chaduat-transformer-producer-user-action-index-v1-topic-stock-balance
+    - topic: chaduat-transformer-producer-user-action-index-v1-topic-location-capture
       configKey: INDEX
       indexes:
-        - name: chaduat-user-action-stock-balance-index-v1
+        - name: chaduat-user-action-location-capture-index-v1
           type: UserAction
           id: $.userAction.id
           isBulk: true
