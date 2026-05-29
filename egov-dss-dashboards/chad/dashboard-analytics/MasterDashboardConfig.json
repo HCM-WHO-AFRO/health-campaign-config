@@ -10109,24 +10109,6 @@
                   "headers": []
                 }
               ]
-            },
-            {
-              "id": 868,
-              "name": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
-              "label": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioDosesAdministeredByDistrict",
-                  "name": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
             }
           ]
         },
@@ -10279,6 +10261,30 @@
                   "name": "DSS_POLIO_POPULATION_PYRAMID",
                   "code": "",
                   "chartType": "sideBySideBar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "name": "DSS_HEALTH_POLIO_INVENTORY",
+          "vizArray": [
+            {
+              "id": 868,
+              "name": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
+              "label": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioDosesAdministeredByDistrict",
+                  "name": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
+                  "code": "",
+                  "chartType": "bar",
                   "filter": "",
                   "headers": []
                 }
