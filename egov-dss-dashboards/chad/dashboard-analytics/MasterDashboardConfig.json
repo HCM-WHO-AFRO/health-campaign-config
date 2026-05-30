@@ -9495,30 +9495,6 @@
           ]
         },
         {
-          "row": 2,
-          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
-          "vizArray": [
-            {
-              "id": 831,
-              "name": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
-              "label": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": false,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "hardToReachVaccinationRate",
-                  "name": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "row": 3,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
