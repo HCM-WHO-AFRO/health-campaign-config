@@ -9499,24 +9499,6 @@
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
-              "id": 830,
-              "name": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
-              "label": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "zeroDoseChildrenIdentified",
-                  "name": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            },
-            {
               "id": 831,
               "name": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
               "label": "DSS_COVERAGE_HARD_TO_REACH_VACCINATION_RATE",
@@ -9538,6 +9520,30 @@
         },
         {
           "row": 3,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 880,
+              "name": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
+              "label": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "hardToReachEnumerationByFacility",
+                  "name": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
@@ -9579,20 +9585,20 @@
           ]
         },
         {
-          "row": 4,
+          "row": 5,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
-              "id": 817,
-              "name": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
-              "label": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
+              "id": 885,
+              "name": "DSS_ENUMERATED_NOT_VACCINATED_ENUMERATION_DRILL",
+              "label": "DSS_ENUMERATED_NOT_VACCINATED_ENUMERATION_DRILL",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "enumeratedNotVaccinatedEnumeration",
-                  "name": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
+                  "id": "enumeratedNotVaccinatedEnumerationDrill",
+                  "name": "DSS_ENUMERATED_NOT_VACCINATED_ENUMERATION_DRILL",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -9603,7 +9609,7 @@
           ]
         },
         {
-          "row": 5,
+          "row": 7,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
@@ -9631,40 +9637,16 @@
           "name": "DSS_HEALTH_POLIO_TEAM_PERFORMANCE",
           "vizArray": [
             {
-              "id": 872,
-              "name": "DSS_POLIO_TEAM_SYNC_RATE",
-              "label": "DSS_POLIO_TEAM_SYNC_RATE",
-              "vizType": "stacked-collection",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioTeamSyncRate",
-                  "name": "DSS_POLIO_TEAM_SYNC_RATE",
-                  "code": "",
-                  "chartType": "metric",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_POLIO_TEAM_PERFORMANCE",
-          "vizArray": [
-            {
-              "id": 873,
-              "name": "DSS_POLIO_CHILDREN_VACCINATED_PER_TEAM",
-              "label": "DSS_POLIO_CHILDREN_VACCINATED_PER_TEAM",
+              "id": 886,
+              "name": "DSS_POLIO_CHILDREN_VACCINATED_BY_FACILITY_DRILL",
+              "label": "DSS_POLIO_CHILDREN_VACCINATED_BY_FACILITY_DRILL",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "polioChildrenVaccinatedPerTeam",
-                  "name": "DSS_POLIO_CHILDREN_VACCINATED_PER_TEAM",
+                  "id": "polioChildrenVaccinatedByFacilityDrill",
+                  "name": "DSS_POLIO_CHILDREN_VACCINATED_BY_FACILITY_DRILL",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -9675,7 +9657,7 @@
           ]
         },
         {
-          "row": 3,
+          "row": 2,
           "name": "DSS_HEALTH_POLIO_TEAM_PERFORMANCE",
           "vizArray": [
             {
@@ -9918,7 +9900,7 @@
                   "id": "refusalsRefusalRateByDistrict",
                   "name": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
                   "code": "",
-                  "chartType": "table",
+                  "chartType": "bar",
                   "filter": "",
                   "headers": []
                 }
@@ -10179,7 +10161,7 @@
           ]
         },
         {
-          "row": 6,
+          "row": 8,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
@@ -10199,29 +10181,11 @@
                   "headers": []
                 }
               ]
-            },
-            {
-              "id": 878,
-              "name": "DSS_POLIO_NEW_SETTLEMENTS_IDENTIFIED",
-              "label": "DSS_POLIO_NEW_SETTLEMENTS_IDENTIFIED",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "polioNewSettlementsIdentified",
-                  "name": "DSS_POLIO_NEW_SETTLEMENTS_IDENTIFIED",
-                  "code": "",
-                  "chartType": "line",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
             }
           ]
         },
         {
-          "row": 7,
+          "row": 9,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
@@ -10245,7 +10209,7 @@
           ]
         },
         {
-          "row": 8,
+          "row": 10,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
@@ -10285,6 +10249,30 @@
                   "name": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
                   "code": "",
                   "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_POLIO_TEAM_PERFORMANCE",
+          "vizArray": [
+            {
+              "id": 884,
+              "name": "DSS_POLIO_SYNC_RATE_BY_FACILITY",
+              "label": "DSS_POLIO_SYNC_RATE_BY_FACILITY",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioSyncRateByFacility",
+                  "name": "DSS_POLIO_SYNC_RATE_BY_FACILITY",
+                  "code": "",
+                  "chartType": "table",
                   "filter": "",
                   "headers": []
                 }
