@@ -9495,31 +9495,7 @@
           ]
         },
         {
-          "row": 3,
-          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
-          "vizArray": [
-            {
-              "id": 880,
-              "name": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
-              "label": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "hardToReachEnumerationByFacility",
-                  "name": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
-                  "code": "",
-                  "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 4,
+          "row": 2,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
@@ -9561,6 +9537,54 @@
           ]
         },
         {
+          "row": 3,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 888,
+              "name": "DSS_HEALTH_GENDER_BREAKDOWN_BY_FACILITY",
+              "label": "DSS_HEALTH_GENDER_BREAKDOWN_BY_FACILITY",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "genderBreakdownByFacilityEnumeration",
+                  "name": "DSS_HEALTH_GENDER_BREAKDOWN_BY_FACILITY",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 889,
+              "name": "DSS_HEALTH_AGE_BAND_BY_FACILITY",
+              "label": "DSS_HEALTH_AGE_BAND_BY_FACILITY",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "ageBandByFacilityEnumeration",
+                  "name": "DSS_HEALTH_AGE_BAND_BY_FACILITY",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "row": 5,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
@@ -9585,7 +9609,7 @@
           ]
         },
         {
-          "row": 7,
+          "row": 6,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
@@ -9601,6 +9625,102 @@
                   "name": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
                   "code": "",
                   "chartType": "sideBySideBar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_POLIO_VACCINATION",
+          "vizArray": [
+            {
+              "id": 892,
+              "name": "DSS_POLIO_CHILDREN_VACCINATED_BY_FACILITY_VAX",
+              "label": "DSS_POLIO_CHILDREN_VACCINATED_BY_FACILITY_VAX",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioChildrenVaccinatedByFacilityVax",
+                  "name": "DSS_POLIO_CHILDREN_VACCINATED_BY_FACILITY_VAX",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_POLIO_VACCINATION",
+          "vizArray": [
+            {
+              "id": 893,
+              "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY_VAX",
+              "label": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY_VAX",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageDistrictPerformanceSummaryVax",
+                  "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY_VAX",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_POLIO_VACCINATION",
+          "vizArray": [
+            {
+              "id": 894,
+              "name": "DSS_POLIO_VACCINATION_BY_FACILITY_DAYWISE",
+              "label": "DSS_POLIO_VACCINATION_BY_FACILITY_DAYWISE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "vaccinationByFacilityDayWise",
+                  "name": "DSS_POLIO_VACCINATION_BY_FACILITY_DAYWISE",
+                  "code": "",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "name": "DSS_HEALTH_POLIO_VACCINATION",
+          "vizArray": [
+            {
+              "id": 895,
+              "name": "DSS_POLIO_VACCINATION_BY_FACILITY_SETTLEMENT_DAYWISE",
+              "label": "DSS_POLIO_VACCINATION_BY_FACILITY_SETTLEMENT_DAYWISE",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "vaccinationByFacilitySettlementDayWise",
+                  "name": "DSS_POLIO_VACCINATION_BY_FACILITY_SETTLEMENT_DAYWISE",
+                  "code": "",
+                  "chartType": "bar",
                   "filter": "",
                   "headers": []
                 }
@@ -10137,22 +10257,46 @@
           ]
         },
         {
-          "row": 8,
+          "row": 7,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
-              "id": 876,
-              "name": "DSS_POLIO_ENUMERATION_DAY_WISE",
-              "label": "DSS_POLIO_ENUMERATION_DAY_WISE",
+              "id": 890,
+              "name": "DSS_POLIO_ENUMERATION_BY_FACILITY",
+              "label": "DSS_POLIO_ENUMERATION_BY_FACILITY",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "polioEnumerationDayWise",
-                  "name": "DSS_POLIO_ENUMERATION_DAY_WISE",
+                  "id": "polioEnumerationByFacility",
+                  "name": "DSS_POLIO_ENUMERATION_BY_FACILITY",
                   "code": "",
-                  "chartType": "line",
+                  "chartType": "bar",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
+              "id": 887,
+              "name": "DSS_POLIO_ENUMERATION_COVERAGE_BY_FACILITY",
+              "label": "DSS_POLIO_ENUMERATION_COVERAGE_BY_FACILITY",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "polioEnumerationCoverageByFacility",
+                  "name": "DSS_POLIO_ENUMERATION_COVERAGE_BY_FACILITY",
+                  "code": "",
+                  "chartType": "bar",
                   "filter": "",
                   "headers": []
                 }
@@ -10165,16 +10309,16 @@
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
-              "id": 877,
-              "name": "DSS_POLIO_ENUMERATION_COVERAGE_BY_SETTLEMENT",
-              "label": "DSS_POLIO_ENUMERATION_COVERAGE_BY_SETTLEMENT",
+              "id": 880,
+              "name": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
+              "label": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "polioEnumerationCoverageBySettlement",
-                  "name": "DSS_POLIO_ENUMERATION_COVERAGE_BY_SETTLEMENT",
+                  "id": "hardToReachEnumerationByFacility",
+                  "name": "DSS_HARD_TO_REACH_ENUMERATION_BY_FACILITY",
                   "code": "",
                   "chartType": "bar",
                   "filter": "",
@@ -10189,16 +10333,16 @@
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
-              "id": 879,
-              "name": "DSS_POLIO_POPULATION_PYRAMID",
-              "label": "DSS_POLIO_POPULATION_PYRAMID",
+              "id": 891,
+              "name": "DSS_POLIO_POPULATION_BY_FACILITY",
+              "label": "DSS_POLIO_POPULATION_BY_FACILITY",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "polioPopulationPyramid",
-                  "name": "DSS_POLIO_POPULATION_PYRAMID",
+                  "id": "polioPopulationByFacility",
+                  "name": "DSS_POLIO_POPULATION_BY_FACILITY",
                   "code": "",
                   "chartType": "sideBySideBar",
                   "filter": "",
