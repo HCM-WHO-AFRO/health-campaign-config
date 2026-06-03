@@ -9796,6 +9796,58 @@
         },
         {
           "row": 1,
+          "name": "DSS_HEALTH_MAPS",
+          "vizArray": [
+            {
+              "id": 896,
+              "name": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
+              "label": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "householdCoordinates",
+                  "name": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
+                  "code": "",
+                  "moduleName": "polio",
+                  "pageName": "household-coordinates",
+                  "chartType": "kibanaComponent",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_MAPS",
+          "vizArray": [
+            {
+              "id": 897,
+              "name": "DSS_HEALTH_VACCINATION_COORDINATES",
+              "label": "DSS_HEALTH_VACCINATION_COORDINATES",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "vaccinationDeliveryCoordinates",
+                  "name": "DSS_HEALTH_VACCINATION_COORDINATES",
+                  "code": "",
+                  "moduleName": "polio",
+                  "pageName": "vaccination-coordinates",
+                  "chartType": "kibanaComponent",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
           "name": "DSS_HEALTH_REFUSALS",
           "vizArray": [
             {
