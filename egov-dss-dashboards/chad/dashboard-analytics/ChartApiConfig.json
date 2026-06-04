@@ -65886,7 +65886,8 @@
     ],
     "isCumulative": false,
     "hideInsights": true,
-    "hideHeaderDenomination": true
+    "hideHeaderDenomination": true,
+    "showLabel": true
   },
   "genderBreakdownByFacilityVaccination": {
     "chartName": "DSS_HEALTH_GENDER_BREAKDOWN_BY_FACILITY_VACCINATION",
