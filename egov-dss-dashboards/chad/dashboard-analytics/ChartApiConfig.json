@@ -63995,21 +63995,21 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.taskDates",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\",\"healthFacility\":\"Data.boundaryHierarchy.healthFacility.keyword\"}",
         "indexName": "chad-user-action-location-capture-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_ISSUED\"}}]}},\"aggs\":{\"Vials Issued\":{\"terms\":{\"size\":500,\"field\":\"Data.userName.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Issued\":{\"sum\":{\"field\":\"Data.additionalDetails.totalVialsReceivedForDay\"}}}}}}}}"
       },
       {
         "module": "COMMON",
         "dateRefField": "Data.taskDates",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\",\"healthFacility\":\"Data.boundaryHierarchy.healthFacility.keyword\"}",
         "indexName": "chad-user-action-location-capture-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_RETURNED\"}}]}},\"aggs\":{\"Vials Returned\":{\"terms\":{\"size\":500,\"field\":\"Data.userName.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Returned\":{\"sum\":{\"field\":\"Data.additionalDetails.totalReturned\"}}}}}}}}"
       },
       {
         "module": "COMMON",
         "dateRefField": "Data.taskDates",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\",\"healthFacility\":\"Data.boundaryHierarchy.healthFacility.keyword\"}",
         "indexName": "chad-user-action-location-capture-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"match_all\":{}},\"aggs\":{\"Vials Net\":{\"terms\":{\"size\":500,\"field\":\"Data.userName.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Issued Stock\":{\"filter\":{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_ISSUED\"}},\"aggs\":{\"SUM\":{\"sum\":{\"field\":\"Data.additionalDetails.totalVialsReceivedForDay\"}}}},\"Returned Stock\":{\"filter\":{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_RETURNED\"}},\"aggs\":{\"SUM\":{\"sum\":{\"field\":\"Data.additionalDetails.totalReturned\"}}}},\"Net\":{\"bucket_script\":{\"buckets_path\":{\"I\":\"Issued Stock>SUM\",\"R\":\"Returned Stock>SUM\"},\"script\":\"params.I - params.R\"}}}}}}}}"
       }
@@ -64020,12 +64020,7 @@
     "documentType": "_doc",
     "action": "",
     "plotLabel": "Vials Issued By Team",
-    "filterKeys": [
-      {
-        "key": "userName",
-        "column": "Team"
-      }
-    ],
+    "filterKeys": [],
     "divisorFields": [],
     "showFooter": false,
     "hideInsights": true,
@@ -64067,7 +64062,8 @@
     ],
     "insight": {},
     "sort": "sortKeyAsc",
-    "_comment": " "
+    "_comment": " ",
+    "kind": "drillDown"
   },
   "polioDosesAdministeredByDistrict": {
     "chartName": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
@@ -64098,28 +64094,28 @@
       {
         "module": "COMMON",
         "dateRefField": "Data.taskDates",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\",\"healthFacility\":\"Data.boundaryHierarchy.healthFacility.keyword\"}",
         "indexName": "chad-user-action-location-capture-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_ISSUED\"}}]}},\"aggs\":{\"Vials Issued\":{\"terms\":{\"size\":500,\"field\":\"Data.userName.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Issued\":{\"sum\":{\"field\":\"Data.additionalDetails.totalVialsReceivedForDay\"}}}}}}}}"
       },
       {
         "module": "COMMON",
         "dateRefField": "Data.taskDates",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\",\"healthFacility\":\"Data.boundaryHierarchy.healthFacility.keyword\"}",
         "indexName": "chad-user-action-location-capture-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_RETURNED\"}}]}},\"aggs\":{\"Vials Returned\":{\"terms\":{\"size\":500,\"field\":\"Data.userName.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Returned\":{\"sum\":{\"field\":\"Data.additionalDetails.totalReturned\"}}}}}}}}"
       },
       {
         "module": "COMMON",
         "dateRefField": "Data.taskDates",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\",\"healthFacility\":\"Data.boundaryHierarchy.healthFacility.keyword\"}",
         "indexName": "chad-user-action-location-capture-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"match_all\":{}},\"aggs\":{\"Balance Stock\":{\"terms\":{\"size\":500,\"field\":\"Data.userName.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Issued Vials\":{\"filter\":{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_ISSUED\"}},\"aggs\":{\"SUM\":{\"sum\":{\"field\":\"Data.additionalDetails.totalVialsReceivedForDay\"}}}},\"Returned Vials\":{\"filter\":{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_RETURNED\"}},\"aggs\":{\"SUM\":{\"sum\":{\"field\":\"Data.additionalDetails.totalReturned\"}}}},\"Net Balance\":{\"bucket_script\":{\"buckets_path\":{\"I\":\"Issued Vials>SUM\",\"R\":\"Returned Vials>SUM\"},\"script\":\"params.I - params.R\"}}}}}}}}"
       },
       {
         "module": "COMMON",
         "dateRefField": "Data.taskDates",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\",\"healthFacility\":\"Data.boundaryHierarchy.healthFacility.keyword\"}",
         "indexName": "chad-project-task-index-v1",
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"Doses Stock\":{\"terms\":{\"size\":500,\"field\":\"Data.userName.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Administered\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
       }
@@ -64130,12 +64126,7 @@
     "documentType": "_doc",
     "action": "",
     "plotLabel": "Stock Reconciliation By Team",
-    "filterKeys": [
-      {
-        "key": "userName",
-        "column": "Team"
-      }
-    ],
+    "filterKeys": [],
     "divisorFields": [],
     "showFooter": false,
     "hideInsights": true,
@@ -64197,7 +64188,8 @@
     ],
     "insight": {},
     "sort": "sortKeyAsc",
-    "_comment": " "
+    "_comment": " ",
+    "kind": "drillDown"
   },
   "polioWastageRate": {
     "chartName": "DSS_POLIO_WASTAGE_RATE",
@@ -66728,5 +66720,289 @@
     "hideInsights": true,
     "hideHeaderDenomination": true,
     "_comment": "Refusals overview cards-list banner"
+  },
+  "coverageEnumerationBanner": {
+    "chartName": "DSS_HEALTH_COVERAGE_ENUMERATION_BANNER",
+    "queries": [
+      {
+        "key": "covTotalChildrenQuery",
+        "module": "COMMON",
+        "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-beneficiary-index-v1",
+        "transformData": "linearAggregation",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Children Enumerated\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}",
+        "select": {
+          "totalChildrenEnumerated": "Total Children Enumerated.Count.value"
+        }
+      },
+      {
+        "key": "covGuestMemberQuery",
+        "module": "COMMON",
+        "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-beneficiary-index-v1",
+        "transformData": "linearAggregation",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Guest Members\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.isGuestMember\":true}},{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}",
+        "select": {
+          "guestMemberCount": "Guest Members.Count.value"
+        }
+      },
+      {
+        "key": "covTotalBeneficiariesQuery",
+        "module": "COMMON",
+        "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-beneficiary-index-v1",
+        "transformData": "linearAggregation",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Beneficiaries\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}",
+        "select": {
+          "totalBeneficiaries": "Total Beneficiaries.value"
+        }
+      }
+    ],
+    "chartType": "rawResponse",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": [
+      "totalChildrenEnumerated",
+      "guestMemberCount",
+      "totalBeneficiaries"
+    ],
+    "cardsList": [
+      {
+        "id": "totalChildrenEnumerated",
+        "labelKey": "DSS_HEALTH_TOTAL_CHILDREN_ENUMERATED",
+        "valuePath": "totalChildrenEnumerated",
+        "valueType": "NUMBER",
+        "descriptionParams": {
+          "count": "totalChildrenEnumerated"
+        },
+        "colorRules": {
+          "type": "constant",
+          "color": "#0B4B66"
+        }
+      },
+      {
+        "id": "guestMemberCount",
+        "labelKey": "DSS_HEALTH_GUEST_MEMBER_COUNT",
+        "valuePath": "guestMemberCount",
+        "valueType": "NUMBER",
+        "descriptionParams": {
+          "count": "guestMemberCount"
+        },
+        "colorRules": {
+          "type": "constant",
+          "color": "#0B4B66"
+        }
+      },
+      {
+        "id": "totalBeneficiaries",
+        "labelKey": "DSS_HEALTH_TOTAL_BENEFICIARIES_ENUMERATION",
+        "valuePath": "totalBeneficiaries",
+        "valueType": "NUMBER",
+        "descriptionParams": {
+          "count": "totalBeneficiaries"
+        },
+        "colorRules": {
+          "type": "constant",
+          "color": "#0B4B66"
+        }
+      }
+    ],
+    "insight": {},
+    "hideInsights": true,
+    "hideHeaderDenomination": true
+  },
+  "polioVialsIssuedByFacility": {
+    "chartName": "DSS_POLIO_VIALS_ISSUED_BY_TEAM",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-user-action-location-capture-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_ISSUED\"}}]}},\"aggs\":{\"Vials Issued\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Issued\":{\"sum\":{\"field\":\"Data.additionalDetails.totalVialsReceivedForDay\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-user-action-location-capture-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_RETURNED\"}}]}},\"aggs\":{\"Vials Returned\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Returned\":{\"sum\":{\"field\":\"Data.additionalDetails.totalReturned\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-user-action-location-capture-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"match_all\":{}},\"aggs\":{\"Vials Net\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Issued Stock\":{\"filter\":{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_ISSUED\"}},\"aggs\":{\"SUM\":{\"sum\":{\"field\":\"Data.additionalDetails.totalVialsReceivedForDay\"}}}},\"Returned Stock\":{\"filter\":{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_RETURNED\"}},\"aggs\":{\"SUM\":{\"sum\":{\"field\":\"Data.additionalDetails.totalReturned\"}}}},\"Net\":{\"bucket_script\":{\"buckets_path\":{\"I\":\"Issued Stock>SUM\",\"R\":\"Returned Stock>SUM\"},\"script\":\"params.I - params.R\"}}}}}}}}"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "polioVialsIssuedByDistrict",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "Health Facility",
+    "filterKeys": [
+      {
+        "key": "healthFacility",
+        "column": "Health Facility"
+      }
+    ],
+    "divisorFields": [],
+    "showFooter": false,
+    "hideInsights": true,
+    "hideHeaderDenomination": true,
+    "excludedColumns": [
+      "SUM",
+      "Issued",
+      "Returned",
+      "Net"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Issued"
+        ],
+        "newField": "Total Vials Issued",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Returned"
+        ],
+        "newField": "Total Vials Returned",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Net"
+        ],
+        "newField": "Net Vials",
+        "_comments": ""
+      }
+    ],
+    "insight": {},
+    "sort": "sortKeyAsc",
+    "_comment": " ",
+    "kind": "drillDown"
+  },
+  "polioStockReconciliationByFacility": {
+    "chartName": "DSS_POLIO_STOCK_RECONCILIATION_RATE",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-user-action-location-capture-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_ISSUED\"}}]}},\"aggs\":{\"Vials Issued\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Issued\":{\"sum\":{\"field\":\"Data.additionalDetails.totalVialsReceivedForDay\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-user-action-location-capture-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_RETURNED\"}}]}},\"aggs\":{\"Vials Returned\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Returned\":{\"sum\":{\"field\":\"Data.additionalDetails.totalReturned\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-user-action-location-capture-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"match_all\":{}},\"aggs\":{\"Balance Stock\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Issued Vials\":{\"filter\":{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_ISSUED\"}},\"aggs\":{\"SUM\":{\"sum\":{\"field\":\"Data.additionalDetails.totalVialsReceivedForDay\"}}}},\"Returned Vials\":{\"filter\":{\"term\":{\"Data.additionalDetails.form.keyword\":\"POLIO_STOCK_RETURNED\"}},\"aggs\":{\"SUM\":{\"sum\":{\"field\":\"Data.additionalDetails.totalReturned\"}}}},\"Net Balance\":{\"bucket_script\":{\"buckets_path\":{\"I\":\"Issued Vials>SUM\",\"R\":\"Returned Vials>SUM\"},\"script\":\"params.I - params.R\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"Doses Stock\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Administered\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "polioStockReconciliationRate",
+    "documentType": "_doc",
+    "action": "",
+    "plotLabel": "Health Facility",
+    "filterKeys": [
+      {
+        "key": "healthFacility",
+        "column": "Health Facility"
+      }
+    ],
+    "divisorFields": [],
+    "showFooter": false,
+    "hideInsights": true,
+    "hideHeaderDenomination": true,
+    "excludedColumns": [
+      "SUM",
+      "Issued",
+      "Returned",
+      "Net Balance",
+      "Administered"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Issued"
+        ],
+        "newField": "Total Issued",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Returned"
+        ],
+        "newField": "Total Returned",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Administered"
+        ],
+        "newField": "Doses Administered",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Net Balance"
+        ],
+        "newField": "Net Stock Balance",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "PercentageComputedField",
+        "fields": [
+          "Net Balance",
+          "Issued"
+        ],
+        "newField": "Reconciliation Rate %",
+        "_comments": "Net Balance / Issued x 100"
+      }
+    ],
+    "insight": {},
+    "sort": "sortKeyAsc",
+    "_comment": " ",
+    "kind": "drillDown"
   }
 }
