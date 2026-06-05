@@ -9331,6 +9331,30 @@
           "name": "DSS_HEALTH_COVERAGE",
           "vizArray": [
             {
+              "id": 907,
+              "name": "DSS_HEALTH_COVERAGE_ENUMERATION_BANNER",
+              "label": "DSS_HEALTH_COVERAGE_ENUMERATION_BANNER",
+              "vizType": "cards-list",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageEnumerationBanner",
+                  "name": "DSS_HEALTH_COVERAGE_ENUMERATION_BANNER",
+                  "code": "",
+                  "chartType": "metric",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 3,
+          "name": "DSS_HEALTH_COVERAGE",
+          "vizArray": [
+            {
               "id": 824,
               "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
               "label": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
@@ -9351,7 +9375,7 @@
           ]
         },
         {
-          "row": 3,
+          "row": 4,
           "name": "DSS_HEALTH_COVERAGE",
           "vizArray": [
             {
@@ -10055,16 +10079,16 @@
           "name": "DSS_HEALTH_POLIO_INVENTORY",
           "vizArray": [
             {
-              "id": 867,
-              "name": "DSS_POLIO_VIALS_ISSUED_BY_TEAM",
-              "label": "DSS_POLIO_VIALS_ISSUED_BY_TEAM",
+              "id": 908,
+              "name": "DSS_POLIO_VIALS_ISSUED_BY_FACILITY",
+              "label": "DSS_POLIO_VIALS_ISSUED_BY_FACILITY",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "polioVialsIssuedByDistrict",
-                  "name": "DSS_POLIO_VIALS_ISSUED_BY_TEAM",
+                  "id": "polioVialsIssuedByFacility",
+                  "name": "DSS_POLIO_VIALS_ISSUED_BY_FACILITY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
@@ -10079,16 +10103,16 @@
           "name": "DSS_HEALTH_POLIO_INVENTORY",
           "vizArray": [
             {
-              "id": 869,
-              "name": "DSS_POLIO_STOCK_RECONCILIATION_RATE",
-              "label": "DSS_POLIO_STOCK_RECONCILIATION_RATE",
+              "id": 909,
+              "name": "DSS_POLIO_STOCK_RECONCILIATION_BY_FACILITY",
+              "label": "DSS_POLIO_STOCK_RECONCILIATION_BY_FACILITY",
               "vizType": "chart",
               "noUnit": true,
               "isCollapsible": false,
               "charts": [
                 {
-                  "id": "polioStockReconciliationRate",
-                  "name": "DSS_POLIO_STOCK_RECONCILIATION_RATE",
+                  "id": "polioStockReconciliationByFacility",
+                  "name": "DSS_POLIO_STOCK_RECONCILIATION_BY_FACILITY",
                   "code": "",
                   "chartType": "table",
                   "filter": "",
