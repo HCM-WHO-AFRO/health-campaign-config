@@ -63556,26 +63556,26 @@
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"chartSpecificProperty\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"startDate\":{\"terms\":{\"field\":\"Data.startDate\"}},\"endDate\":{\"terms\":{\"field\":\"Data.endDate\"}},\"Vaccination Target\":{\"date_histogram\":{\"field\":\"Data.startDate\",\"calendar_interval\":\"day\"},\"aggs\":{\"Target\":{\"sum\":{\"field\":\"Data.targetPerDay\"}}}},\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}"
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"chartSpecificProperty\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"startDate\":{\"terms\":{\"field\":\"Data.projectBeneficiary.clientAuditDetails.createdTime\"}},\"endDate\":{\"terms\":{\"field\":\"Data.projectBeneficiary.clientAuditDetails.createdTime\"}},\"Daily Target\":{\"date_histogram\":{\"field\":\"Data.projectBeneficiary.clientAuditDetails.createdTime\",\"calendar_interval\":\"day\"},\"aggs\":{\"Target\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}},\"Overall Target\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}"
       }
     ],
     "chartType": "line",
     "isCumulative": true,
-    "valueType": "percentage",
+    "valueType": "number",
     "drillChart": "none",
     "documentType": "_doc",
     "action": "",
-    "predictionPath": "Vaccination Target",
     "distributionPath": "Daily Vaccinations",
     "cappedTarget": "Overall Target",
-    "showPercentageValue": true,
+    "showPercentageValue": false,
     "aggregationPaths": [
       "Daily Vaccinations",
-      "Vaccination Target"
+      "Daily Target"
     ],
     "insight": {},
-    "_comment": " "
+    "_comment": " ",
+    "predictionPath": "Daily Target"
   },
   "coverageDistrictPerformanceSummary": {
     "chartName": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
@@ -63584,8 +63584,8 @@
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"District Target\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}}}"
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"District Eligible\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"EligibleCount\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       },
       {
         "module": "COMMON",
@@ -63604,16 +63604,16 @@
     "plotLabel": "Districts",
     "excludedColumns": [
       "S.N.",
-      "Overall Target"
+      "EligibleCount"
     ],
     "computedFields": [
       {
         "postAggregationTheory": "",
         "actionName": "AdditiveComputedField",
         "fields": [
-          "Overall Target"
+          "EligibleCount"
         ],
-        "newField": "Vaccination Target",
+        "newField": "Eligible Children",
         "_comments": ""
       },
       {
@@ -63621,7 +63621,7 @@
         "actionName": "PercentageComputedField",
         "fields": [
           "Vaccinated Count",
-          "Vaccination Target"
+          "Eligible Children"
         ],
         "newField": "Coverage Rate (%)",
         "_comments": ""
@@ -65279,7 +65279,7 @@
         "fields": [
           "Age0_11"
         ],
-        "newField": "0-11 Months",
+        "newField": "0 to 11 Months",
         "_comments": ""
       },
       {
@@ -65288,7 +65288,7 @@
         "fields": [
           "Age12_23"
         ],
-        "newField": "12-23 Months",
+        "newField": "12 to 23 Months",
         "_comments": ""
       },
       {
@@ -65297,7 +65297,7 @@
         "fields": [
           "Age24_59"
         ],
-        "newField": "24-59 Months",
+        "newField": "24 to 59 Months",
         "_comments": ""
       }
     ],
@@ -65567,8 +65567,8 @@
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.district.keyword\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"Districts Target\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}}}"
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"District Eligible\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.district.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"EligibleCount\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       },
       {
         "module": "COMMON",
@@ -65592,16 +65592,16 @@
     "plotLabel": "Districts",
     "excludedColumns": [
       "S.N.",
-      "Overall Target"
+      "EligibleCount"
     ],
     "computedFields": [
       {
         "postAggregationTheory": "",
         "actionName": "AdditiveComputedField",
         "fields": [
-          "Overall Target"
+          "EligibleCount"
         ],
-        "newField": "Vaccination Target",
+        "newField": "Eligible Children",
         "_comments": ""
       },
       {
@@ -65609,7 +65609,7 @@
         "actionName": "PercentageComputedField",
         "fields": [
           "Vaccinated Count",
-          "Vaccination Target"
+          "Eligible Children"
         ],
         "newField": "Coverage Rate (%)",
         "_comments": ""
@@ -65628,8 +65628,8 @@
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"Health Facility Target\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}}}"
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Facility Eligible\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"EligibleCount\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       },
       {
         "module": "COMMON",
@@ -65653,16 +65653,16 @@
     "plotLabel": "Health Facility",
     "excludedColumns": [
       "S.N.",
-      "Overall Target"
+      "EligibleCount"
     ],
     "computedFields": [
       {
         "postAggregationTheory": "",
         "actionName": "AdditiveComputedField",
         "fields": [
-          "Overall Target"
+          "EligibleCount"
         ],
-        "newField": "Vaccination Target",
+        "newField": "Eligible Children",
         "_comments": ""
       },
       {
@@ -65670,7 +65670,7 @@
         "actionName": "PercentageComputedField",
         "fields": [
           "Vaccinated Count",
-          "Vaccination Target"
+          "Eligible Children"
         ],
         "newField": "Coverage Rate (%)",
         "_comments": ""
@@ -65689,8 +65689,8 @@
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\",\"healthFacility\":\"Data.boundaryHierarchy.healthFacility.keyword\"}",
-        "indexName": "chad-project-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"exists\":{\"field\":\"Data.boundaryHierarchy.settlement.keyword\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"Settlement Target\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.settlement.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Overall Target\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}}}"
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Settlement Eligible\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.settlement.keyword\",\"size\":200,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"EligibleCount\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       },
       {
         "module": "COMMON",
@@ -65709,16 +65709,16 @@
     "plotLabel": "Settlement",
     "excludedColumns": [
       "S.N.",
-      "Overall Target"
+      "EligibleCount"
     ],
     "computedFields": [
       {
         "postAggregationTheory": "",
         "actionName": "AdditiveComputedField",
         "fields": [
-          "Overall Target"
+          "EligibleCount"
         ],
-        "newField": "Vaccination Target",
+        "newField": "Eligible Children",
         "_comments": ""
       },
       {
@@ -65726,7 +65726,7 @@
         "actionName": "PercentageComputedField",
         "fields": [
           "Vaccinated Count",
-          "Vaccination Target"
+          "Eligible Children"
         ],
         "newField": "Coverage Rate (%)",
         "_comments": ""
@@ -66036,15 +66036,15 @@
         }
       },
       {
-        "key": "coverageVaccinationTargetQuery",
+        "key": "coverageEligibleEnumeratedQuery",
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-index-v1",
+        "indexName": "chad-project-beneficiary-index-v1",
         "transformData": "linearAggregation",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Vaccination Target\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"count\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Eligible Enumerated\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}",
         "select": {
-          "vaccinationTarget": "Vaccination Target.count.value"
+          "eligibleEnumerated": "Eligible Enumerated.Count.value"
         }
       },
       {
@@ -66064,9 +66064,9 @@
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-index-v1",
+        "indexName": "chad-project-beneficiary-index-v1",
         "transformData": "linearAggregation",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Facilities\":{\"filter\":{\"bool\":{\"must\":[{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"count\":{\"cardinality\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\"}}}}}}",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Total Facilities\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"count\":{\"cardinality\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\"}}}}}}",
         "select": {
           "totalFacilities": "Total Facilities.count.value"
         }
@@ -66094,7 +66094,7 @@
         "datasets": [],
         "outputMappings": [
           {
-            "overallCoverageRate": "multiply(divide(totalVaccinated, vaccinationTarget), 100)"
+            "overallCoverageRate": "multiply(divide(totalVaccinated, eligibleEnumerated), 100)"
           },
           {
             "hfCoverageRate": "multiply(divide(facilitiesCovered, totalFacilities), 100)"
@@ -66109,7 +66109,7 @@
       "totalVaccinated",
       "overallCoverageRate",
       "hfCoverageRate",
-      "vaccinationTarget",
+      "eligibleEnumerated",
       "facilitiesCovered",
       "totalFacilities",
       "dailyVaccinationRate"
@@ -66311,15 +66311,15 @@
         }
       },
       {
-        "key": "vacVaccinationTargetQuery",
+        "key": "vacEligibleEnumeratedQuery",
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-index-v1",
+        "indexName": "chad-project-beneficiary-index-v1",
         "transformData": "linearAggregation",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Vaccination Target\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.targetType.keyword\":\"INDIVIDUAL\"}},{\"wildcard\":{\"Data.productName.keyword\":\"*nOPV2*\"}}]}},\"aggs\":{\"count\":{\"sum\":{\"field\":\"Data.overallTarget\"}}}}}}",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Eligible Enumerated\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}",
         "select": {
-          "vaccinationTarget": "Vaccination Target.count.value"
+          "eligibleEnumerated": "Eligible Enumerated.Count.value"
         }
       },
       {
@@ -66329,7 +66329,7 @@
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-task-index-v1",
         "transformData": "linearAggregation",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Zero Dose\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}},{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"gte\":0,\"lte\":59}}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Zero Dose\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}",
         "select": {
           "zeroDose": "Zero Dose.count.value"
         }
@@ -66345,7 +66345,7 @@
         "datasets": [],
         "outputMappings": [
           {
-            "coverageRate": "multiply(divide(totalVaccinated, vaccinationTarget), 100)"
+            "coverageRate": "multiply(divide(totalVaccinated, eligibleEnumerated), 100)"
           }
         ]
       }
@@ -66509,7 +66509,7 @@
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-task-index-v1",
         "transformData": "linearAggregation",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Avg GPS Accuracy (m)\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.additionalDetails.locationAccuracy.keyword\"}}]}},\"aggs\":{\"count\":{\"avg\":{\"script\":{\"source\":\"Double.parseDouble(doc['Data.additionalDetails.locationAccuracy.keyword'].value)\",\"lang\":\"painless\"}}}}}}}",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Avg GPS Accuracy (m)\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"exists\":{\"field\":\"Data.additionalDetails.locationAccuracy.keyword\"}}]}},\"aggs\":{\"count\":{\"scripted_metric\":{\"init_script\":\"state.total = 0.0; state.count = 0\",\"map_script\":\"if(doc['Data.additionalDetails.locationAccuracy.keyword'].size() > 0) { state.total += Double.parseDouble(doc['Data.additionalDetails.locationAccuracy.keyword'].value); state.count++ }\",\"combine_script\":\"return state\",\"reduce_script\":\"double total = 0; long count = 0; for(s in states) { total += s.total; count += s.count; } if(count == 0) return 0; double avg = total/count; return Math.round(avg * 10) / 10.0\"}}}}}}",
         "select": {
           "avgGpsAccuracy": "Avg GPS Accuracy (m).count.value"
         }
@@ -67004,5 +67004,93 @@
     "sort": "sortKeyAsc",
     "_comment": " ",
     "kind": "drillDown"
+  },
+  "enumerationByFacilityFixed": {
+    "chartName": "DSS_POLIO_ENUMERATION_BY_FACILITY_FIXED",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}},{\"range\":{\"Data.syncedDate\":{\"gte\":\"2026-06-03\",\"lt\":\"2026-06-04\"}}}]}},\"aggs\":{\"Day3\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Day3Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}},{\"range\":{\"Data.syncedDate\":{\"gte\":\"2026-06-04\",\"lt\":\"2026-06-05\"}}}]}},\"aggs\":{\"Day4\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Day4Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}},{\"range\":{\"Data.syncedDate\":{\"gte\":\"2026-06-05\",\"lt\":\"2026-06-06\"}}}]}},\"aggs\":{\"Day5\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Day5Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}},{\"range\":{\"Data.syncedDate\":{\"gte\":\"2026-06-03\",\"lt\":\"2026-06-06\"}}}]}},\"aggs\":{\"Total\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"TotalCount\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": null,
+    "isCumulative": null,
+    "plotLabel": "Health Facility",
+    "excludedColumns": [
+      "S.N.",
+      "Day3Count",
+      "Day4Count",
+      "Day5Count",
+      "TotalCount"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Day3Count"
+        ],
+        "newField": "3 Jun",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Day4Count"
+        ],
+        "newField": "4 Jun",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Day5Count"
+        ],
+        "newField": "5 Jun",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "TotalCount"
+        ],
+        "newField": "Total",
+        "_comments": ""
+      }
+    ],
+    "hideInsights": true,
+    "hideHeaderDenomination": true
   }
 }

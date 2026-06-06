@@ -9355,30 +9355,6 @@
           "name": "DSS_HEALTH_COVERAGE",
           "vizArray": [
             {
-              "id": 824,
-              "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
-              "label": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "coverageCampaignCompletionForecast",
-                  "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
-                  "code": "",
-                  "chartType": "line",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 4,
-          "name": "DSS_HEALTH_COVERAGE",
-          "vizArray": [
-            {
               "id": 825,
               "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
               "label": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
@@ -10169,6 +10145,30 @@
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
+              "id": 910,
+              "name": "DSS_POLIO_ENUMERATION_BY_FACILITY_FIXED",
+              "label": "DSS_POLIO_ENUMERATION_BY_FACILITY_FIXED",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "enumerationByFacilityFixed",
+                  "name": "DSS_POLIO_ENUMERATION_BY_FACILITY_FIXED",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 8,
+          "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
+          "vizArray": [
+            {
               "id": 890,
               "name": "DSS_POLIO_ENUMERATION_BY_FACILITY",
               "label": "DSS_POLIO_ENUMERATION_BY_FACILITY",
@@ -10189,7 +10189,7 @@
           ]
         },
         {
-          "row": 8,
+          "row": 9,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
@@ -10213,7 +10213,7 @@
           ]
         },
         {
-          "row": 9,
+          "row": 10,
           "name": "DSS_HEALTH_REGISTRATION_AND_ADMINISTRATION",
           "vizArray": [
             {
