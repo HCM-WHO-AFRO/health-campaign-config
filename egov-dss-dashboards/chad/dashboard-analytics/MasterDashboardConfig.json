@@ -9700,7 +9700,7 @@
                   "id": "vaccinationByFacilityDayWise",
                   "name": "DSS_POLIO_VACCINATION_BY_FACILITY_DAYWISE",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -9724,7 +9724,7 @@
                   "id": "vaccinationByFacilitySettlementDayWise",
                   "name": "DSS_POLIO_VACCINATION_BY_FACILITY_SETTLEMENT_DAYWISE",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -9910,7 +9910,7 @@
                   "id": "polioTeamSubmissionRateOutlier",
                   "name": "DSS_POLIO_TEAM_SUBMISSION_RATE_OUTLIER",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10000,7 +10000,7 @@
                   "id": "refusalsRefusalReasonsBreakdown",
                   "name": "DSS_REFUSALS_REFUSAL_REASONS_BREAKDOWN",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10018,7 +10018,7 @@
                   "id": "refusalsAbsenceReasonsBreakdown",
                   "name": "DSS_REFUSALS_ABSENCE_REASONS_BREAKDOWN",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10042,7 +10042,7 @@
                   "id": "refusalsRefusalRateByDistrict",
                   "name": "DSS_REFUSALS_REFUSAL_RATE_BY_DISTRICT",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10186,7 +10186,7 @@
                   "id": "polioWastageRate",
                   "name": "DSS_POLIO_WASTAGE_RATE",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10204,7 +10204,7 @@
                   "id": "polioStockOutRisk",
                   "name": "DSS_POLIO_STOCK_OUT_RISK",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10252,7 +10252,7 @@
                   "id": "polioEnumerationByFacility",
                   "name": "DSS_POLIO_ENUMERATION_BY_FACILITY",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10276,7 +10276,7 @@
                   "id": "polioEnumerationCoverageByFacility",
                   "name": "DSS_POLIO_ENUMERATION_COVERAGE_BY_FACILITY",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10300,7 +10300,7 @@
                   "id": "polioPopulationByFacility",
                   "name": "DSS_POLIO_POPULATION_BY_FACILITY",
                   "code": "",
-                  "chartType": "sideBySideBar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
@@ -10324,7 +10324,7 @@
                   "id": "polioDosesAdministeredByDistrict",
                   "name": "DSS_POLIO_DOSES_ADMINISTERED_BY_TEAM",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "horizontalBar",
                   "filter": "",
                   "headers": []
                 }
