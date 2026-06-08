@@ -9355,6 +9355,30 @@
           "name": "DSS_HEALTH_COVERAGE",
           "vizArray": [
             {
+              "id": 824,
+              "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
+              "label": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "coverageCampaignCompletionForecast",
+                  "name": "DSS_COVERAGE_CAMPAIGN_COMPLETION_FORECAST",
+                  "code": "",
+                  "chartType": "line",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 4,
+          "name": "DSS_HEALTH_COVERAGE",
+          "vizArray": [
+            {
               "id": 825,
               "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
               "label": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
@@ -9367,6 +9391,58 @@
                   "name": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
                   "code": "",
                   "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
+          "name": "DSS_HEALTH_MAPS",
+          "vizArray": [
+            {
+              "id": 896,
+              "name": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
+              "label": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "householdCoordinates",
+                  "name": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
+                  "code": "",
+                  "moduleName": "polio",
+                  "pageName": "household-coordinates",
+                  "chartType": "kibanaComponent",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_MAPS",
+          "vizArray": [
+            {
+              "id": 897,
+              "name": "DSS_HEALTH_VACCINATION_COORDINATES",
+              "label": "DSS_HEALTH_VACCINATION_COORDINATES",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "vaccinationDeliveryCoordinates",
+                  "name": "DSS_HEALTH_VACCINATION_COORDINATES",
+                  "code": "",
+                  "moduleName": "polio",
+                  "pageName": "vaccination-coordinates",
+                  "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
                 }
@@ -9432,7 +9508,7 @@
                   "id": "childrenByAgeBandEnumeration",
                   "name": "DSS_HEALTH_CHILDREN_BY_AGE_BAND_ENUMERATION",
                   "code": "",
-                  "chartType": "bar",
+                  "chartType": "donut",
                   "filter": "",
                   "headers": []
                 }
@@ -9706,6 +9782,54 @@
         },
         {
           "row": 1,
+          "name": "DSS_HEALTH_ZERO_DOSE",
+          "vizArray": [
+            {
+              "id": 911,
+              "name": "DSS_HEALTH_ZERO_DOSE_BY_FACILITY_AGE_BAND",
+              "label": "DSS_HEALTH_ZERO_DOSE_BY_FACILITY_AGE_BAND",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "zeroDoseByFacilityAgeBand",
+                  "name": "DSS_HEALTH_ZERO_DOSE_BY_FACILITY_AGE_BAND",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 2,
+          "name": "DSS_HEALTH_ZERO_DOSE",
+          "vizArray": [
+            {
+              "id": 912,
+              "name": "DSS_HEALTH_ZERO_DOSE_BY_FACILITY_GENDER",
+              "label": "DSS_HEALTH_ZERO_DOSE_BY_FACILITY_GENDER",
+              "vizType": "chart",
+              "noUnit": true,
+              "isCollapsible": false,
+              "charts": [
+                {
+                  "id": "zeroDoseByFacilityGender",
+                  "name": "DSS_HEALTH_ZERO_DOSE_BY_FACILITY_GENDER",
+                  "code": "",
+                  "chartType": "table",
+                  "filter": "",
+                  "headers": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "row": 1,
           "name": "DSS_HEALTH_POLIO_TEAM_PERFORMANCE",
           "vizArray": [
             {
@@ -9787,58 +9911,6 @@
                   "name": "DSS_POLIO_TEAM_SUBMISSION_RATE_OUTLIER",
                   "code": "",
                   "chartType": "bar",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 1,
-          "name": "DSS_HEALTH_MAPS",
-          "vizArray": [
-            {
-              "id": 896,
-              "name": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
-              "label": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "householdCoordinates",
-                  "name": "DSS_HEALTH_HOUSEHOLD_COORDINATES",
-                  "code": "",
-                  "moduleName": "polio",
-                  "pageName": "household-coordinates",
-                  "chartType": "kibanaComponent",
-                  "filter": "",
-                  "headers": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "row": 2,
-          "name": "DSS_HEALTH_MAPS",
-          "vizArray": [
-            {
-              "id": 897,
-              "name": "DSS_HEALTH_VACCINATION_COORDINATES",
-              "label": "DSS_HEALTH_VACCINATION_COORDINATES",
-              "vizType": "chart",
-              "noUnit": true,
-              "isCollapsible": false,
-              "charts": [
-                {
-                  "id": "vaccinationDeliveryCoordinates",
-                  "name": "DSS_HEALTH_VACCINATION_COORDINATES",
-                  "code": "",
-                  "moduleName": "polio",
-                  "pageName": "vaccination-coordinates",
-                  "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
                 }

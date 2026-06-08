@@ -63008,7 +63008,7 @@
         "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Children By Age Band\":{\"range\":{\"field\":\"Data.additionalDetails.ageInMonths\",\"ranges\":[{\"key\":\"0 to 11 Months\",\"from\":0,\"to\":12},{\"key\":\"12 to 23 Months\",\"from\":12,\"to\":24},{\"key\":\"24 to 59 Months\",\"from\":24,\"to\":60}]},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       }
     ],
-    "chartType": "line",
+    "chartType": "pie",
     "isCumulative": false,
     "valueType": "number",
     "drillChart": "none",
@@ -63018,7 +63018,8 @@
       "Children By Age Band"
     ],
     "insight": {},
-    "_comment": " "
+    "_comment": " ",
+    "showLabel": true
   },
   "enumeratedNotVaccinatedEnumeration": {
     "chartName": "DSS_HEALTH_ENUMERATED_NOT_VACCINATED",
@@ -63298,7 +63299,7 @@
         "dateRefField": "Data.taskDates",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_FAILED\"}},{\"term\":{\"Data.additionalDetails.reason.keyword\":\"REFUSED\"}}]}},\"aggs\":{\"Refusals by Health Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":200},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.administrationStatus.keyword\":\"ADMINISTRATION_FAILED\"}},{\"term\":{\"Data.additionalDetails.reason.keyword\":\"REFUSED\"}}]}},\"aggs\":{\"Refusals by Health Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":200,\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
       }
     ],
     "chartType": "line",
@@ -63311,7 +63312,8 @@
     "aggregationPaths": [
       "Refusals by Health Facility"
     ],
-    "isCumulative": false
+    "isCumulative": false,
+    "sort": "sortValueDesc"
   },
   "refusalsRefusalRateBySettlementType": {
     "chartName": "DSS_REFUSALS_REFUSAL_RATE_BY_SETTLEMENT_TYPE",
@@ -63547,17 +63549,17 @@
     "queries": [
       {
         "module": "COMMON",
-        "dateRefField": "Data.taskDates",
+        "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"Daily Vaccinations\":{\"date_histogram\":{\"field\":\"Data.taskDates\",\"calendar_interval\":\"day\",\"min_doc_count\":1},\"aggs\":{\"Day wise vaccinations\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+        "indexName": "chad-project-beneficiary-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Daily Enumerations\":{\"date_histogram\":{\"field\":\"Data.syncedDate\",\"calendar_interval\":\"day\",\"min_doc_count\":0,\"order\":{\"_key\":\"asc\"},\"extended_bounds\":{\"min\":\"2026-06-03\",\"max\":\"now/d\"}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       },
       {
         "module": "COMMON",
         "dateRefField": "",
         "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-beneficiary-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"chartSpecificProperty\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"startDate\":{\"terms\":{\"field\":\"Data.projectBeneficiary.clientAuditDetails.createdTime\"}},\"endDate\":{\"terms\":{\"field\":\"Data.projectBeneficiary.clientAuditDetails.createdTime\"}},\"Daily Target\":{\"date_histogram\":{\"field\":\"Data.projectBeneficiary.clientAuditDetails.createdTime\",\"calendar_interval\":\"day\"},\"aggs\":{\"Target\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}},\"Overall Target\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}"
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGS\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"Daily Vaccinations\":{\"date_histogram\":{\"field\":\"Data.taskDates\",\"calendar_interval\":\"day\",\"min_doc_count\":0,\"order\":{\"_key\":\"asc\"},\"extended_bounds\":{\"min\":\"2026-06-03\",\"max\":\"now/d\"}},\"aggs\":{\"Day wise vaccinations\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
       }
     ],
     "chartType": "line",
@@ -63566,16 +63568,12 @@
     "drillChart": "none",
     "documentType": "_doc",
     "action": "",
-    "distributionPath": "Daily Vaccinations",
-    "cappedTarget": "Overall Target",
-    "showPercentageValue": false,
     "aggregationPaths": [
-      "Daily Vaccinations",
-      "Daily Target"
+      "Daily Enumerations",
+      "Daily Vaccinations"
     ],
     "insight": {},
-    "_comment": " ",
-    "predictionPath": "Daily Target"
+    "_comment": " "
   },
   "coverageDistrictPerformanceSummary": {
     "chartName": "DSS_COVERAGE_DISTRICT_PERFORMANCE_SUMMARY",
@@ -64086,7 +64084,8 @@
       "Doses Administered"
     ],
     "insight": {},
-    "_comment": " "
+    "_comment": " ",
+    "sort": "sortValueDesc"
   },
   "polioStockReconciliationRate": {
     "chartName": "DSS_POLIO_STOCK_RECONCILIATION_RATE",
@@ -64212,7 +64211,8 @@
       "Wastage Rate"
     ],
     "insight": {},
-    "_comment": " "
+    "_comment": " ",
+    "sort": "sortValueDesc"
   },
   "polioStockOutRisk": {
     "chartName": "DSS_POLIO_STOCK_OUT_RISK",
@@ -64243,7 +64243,8 @@
       "Avg Consumption"
     ],
     "insight": {},
-    "_comment": " "
+    "_comment": " ",
+    "sort": "sortValueDesc"
   },
   "polioChildrenVaccinatedPerTeam": {
     "chartName": "DSS_POLIO_CHILDREN_VACCINATED_PER_TEAM",
@@ -64351,7 +64352,8 @@
       "Submissions Per Team"
     ],
     "insight": {},
-    "_comment": "Shows all records per team sorted desc; outlier teams have disproportionately high bars"
+    "_comment": "Shows all records per team sorted desc; outlier teams have disproportionately high bars",
+    "sort": "sortValueDesc"
   },
   "polioTeamSyncRate": {
     "chartName": "DSS_POLIO_TEAM_SYNC_RATE",
@@ -64456,7 +64458,8 @@
     "insight": {},
     "_comment": " ",
     "kind": "drillDown",
-    "filterKeys": []
+    "filterKeys": [],
+    "sort": "sortValueDesc"
   },
   "polioNewSettlementsIdentified": {
     "chartName": "DSS_POLIO_NEW_SETTLEMENTS_IDENTIFIED",
@@ -64542,7 +64545,8 @@
         "key": "healthFacility",
         "column": "Hard To Reach By Facility"
       }
-    ]
+    ],
+    "sort": "sortValueDesc"
   },
   "enumerationByFacilityAndSettlement": {
     "chartName": "DSS_ENUMERATION_BY_FACILITY_AND_SETTLEMENT",
@@ -64963,7 +64967,8 @@
     "_comment": "",
     "kind": "drillDown",
     "filterKeys": [],
-    "plotLabel": "Settlement"
+    "plotLabel": "Settlement",
+    "sort": "sortValueDesc"
   },
   "polioEnumerationCoverageByFacility": {
     "chartName": "DSS_POLIO_ENUMERATION_COVERAGE_BY_SETTLEMENT",
@@ -64973,14 +64978,14 @@
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
         "requestQueryMap": "{\"projectTypeId\": \"Data.projectTypeId.keyword\", \"region\": \"Data.boundaryHierarchy.region.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"campaignNumber\": \"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Enumerated By Facility\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Beneficiaries\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}}]}},\"aggs\":{\"Enumerated By Facility\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"Beneficiaries\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       },
       {
         "module": "COMMON",
         "dateRefField": "Data.taskDates",
         "requestQueryMap": "{\"projectTypeId\": \"Data.projectTypeId.keyword\", \"region\": \"Data.boundaryHierarchy.region.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"campaignNumber\": \"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-task-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Vaccinated By Facility\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Vaccinated\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"Vaccinated By Facility\":{\"terms\":{\"size\":500,\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"Vaccinated\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.isDelivered\":true}},{\"term\":{\"Data.productName.keyword\":\"nOPV2\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
       }
     ],
     "chartType": "line",
@@ -65002,7 +65007,8 @@
         "key": "healthFacility",
         "column": "Health Facility"
       }
-    ]
+    ],
+    "sort": "sortValueDesc"
   },
   "coverageBySettlementEnumeration": {
     "chartName": "DSS_HEALTH_COVERAGE_BY_SETTLEMENT_TYPE",
@@ -65036,7 +65042,8 @@
     "insight": {},
     "_comment": " ",
     "kind": "drillDown",
-    "filterKeys": []
+    "filterKeys": [],
+    "sort": "sortValueDesc"
   },
   "genderBreakdownByFacilityEnumeration": {
     "chartName": "DSS_HEALTH_GENDER_BREAKDOWN_BY_FACILITY",
@@ -65325,6 +65332,7 @@
     "aggregationPaths": [
       "Enumeration By Facility"
     ],
+    "sort": "sortValueDesc",
     "isCumulative": false,
     "plotLabel": "Health Facility",
     "kind": "drillDown",
@@ -65345,14 +65353,14 @@
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
         "requestQueryMap": "{\"projectTypeId\": \"Data.projectTypeId.keyword\", \"region\": \"Data.boundaryHierarchy.region.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"campaignNumber\": \"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.gender.keyword\":\"MALE\"}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}},{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}}]}},\"aggs\":{\"Male By Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.gender.keyword\":\"MALE\"}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}},{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}}]}},\"aggs\":{\"Male By Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       },
       {
         "module": "COMMON",
         "dateRefField": "Data.projectBeneficiary.clientAuditDetails.createdTime",
         "requestQueryMap": "{\"projectTypeId\": \"Data.projectTypeId.keyword\", \"region\": \"Data.boundaryHierarchy.region.keyword\", \"district\": \"Data.boundaryHierarchy.district.keyword\", \"campaignNumber\": \"Data.campaignNumber.keyword\"}",
         "indexName": "chad-project-beneficiary-index-v1",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.gender.keyword\":\"FEMALE\"}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}},{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}}]}},\"aggs\":{\"Female By Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.gender.keyword\":\"FEMALE\"}},{\"term\":{\"Data.additionalDetails.isHeadOfHousehold\":false}},{\"range\":{\"Data.additionalDetails.ageInMonths\":{\"lte\":59}}}]}},\"aggs\":{\"Female By Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"Count\":{\"value_count\":{\"field\":\"Data.projectBeneficiary.id.keyword\"}}}}}}}}"
       }
     ],
     "chartType": "line",
@@ -65374,7 +65382,8 @@
       }
     ],
     "hideInsights": true,
-    "hideHeaderDenomination": true
+    "hideHeaderDenomination": true,
+    "sort": "sortValueDesc"
   },
   "polioChildrenVaccinatedBySettlementDrill": {
     "chartName": "DSS_POLIO_CHILDREN_VACCINATED_PER_TEAM",
@@ -65767,7 +65776,8 @@
       }
     ],
     "hideInsights": true,
-    "hideHeaderDenomination": true
+    "hideHeaderDenomination": true,
+    "sort": "sortValueDesc"
   },
   "vaccinationByFacilitySettlementDayWise": {
     "chartName": "DSS_POLIO_VACCINATION_BY_FACILITY",
@@ -65798,7 +65808,8 @@
       }
     ],
     "hideInsights": true,
-    "hideHeaderDenomination": true
+    "hideHeaderDenomination": true,
+    "sort": "sortValueDesc"
   },
   "vaccinationBySettlementDayWise": {
     "chartName": "DSS_POLIO_VACCINATION_BY_SETTLEMENT",
@@ -65829,7 +65840,8 @@
       }
     ],
     "hideInsights": true,
-    "hideHeaderDenomination": true
+    "hideHeaderDenomination": true,
+    "sort": "sortValueDesc"
   },
   "vaccinationDayWiseLeaf": {
     "chartName": "DSS_POLIO_VACCINATION_DAY_WISE",
@@ -66321,18 +66333,6 @@
         "select": {
           "eligibleEnumerated": "Eligible Enumerated.Count.value"
         }
-      },
-      {
-        "key": "vacZeroDoseQuery",
-        "module": "COMMON",
-        "dateRefField": "Data.taskDates",
-        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
-        "indexName": "chad-project-task-index-v1",
-        "transformData": "linearAggregation",
-        "aggrQuery": "{\"size\":0,\"aggs\":{\"Zero Dose\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}}]}},\"aggs\":{\"count\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}",
-        "select": {
-          "zeroDose": "Zero Dose.count.value"
-        }
       }
     ],
     "chartType": "rawResponse",
@@ -66355,8 +66355,7 @@
     "action": "",
     "aggregationPaths": [
       "totalVaccinated",
-      "coverageRate",
-      "zeroDose"
+      "coverageRate"
     ],
     "cardsList": [
       {
@@ -66379,19 +66378,6 @@
         "valueType": "PERCENTAGE",
         "descriptionParams": {
           "count": "coverageRate"
-        },
-        "colorRules": {
-          "type": "constant",
-          "color": "#0B4B66"
-        }
-      },
-      {
-        "id": "zeroDose",
-        "labelKey": "DSS_COVERAGE_ZERO_DOSE_CHILDREN_IDENTIFIED",
-        "valuePath": "zeroDose",
-        "valueType": "NUMBER",
-        "descriptionParams": {
-          "count": "zeroDose"
         },
         "colorRules": {
           "type": "constant",
@@ -66651,12 +66637,12 @@
     ],
     "cardsList": [
       {
-        "id": "totalCouldNotVaccinate",
-        "labelKey": "DSS_REFUSALS_TOTAL_COULD_NOT_VACCINATE",
-        "valuePath": "totalCouldNotVaccinate",
+        "id": "unresolvedMissedChildren",
+        "labelKey": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
+        "valuePath": "missedCount",
         "valueType": "NUMBER",
         "descriptionParams": {
-          "count": "totalCouldNotVaccinate"
+          "count": "missedCount"
         },
         "colorRules": {
           "type": "constant",
@@ -66696,19 +66682,6 @@
         "valueType": "PERCENTAGE",
         "descriptionParams": {
           "count": "revisitCompletionRate"
-        },
-        "colorRules": {
-          "type": "constant",
-          "color": "#0B4B66"
-        }
-      },
-      {
-        "id": "unresolvedMissedChildren",
-        "labelKey": "DSS_REFUSALS_UNRESOLVED_MISSED_CHILDREN",
-        "valuePath": "missedCount",
-        "valueType": "NUMBER",
-        "descriptionParams": {
-          "count": "missedCount"
         },
         "colorRules": {
           "type": "constant",
@@ -67087,6 +67060,131 @@
           "TotalCount"
         ],
         "newField": "Total",
+        "_comments": ""
+      }
+    ],
+    "hideInsights": true,
+    "hideHeaderDenomination": true
+  },
+  "zeroDoseByFacilityAgeBand": {
+    "chartName": "DSS_HEALTH_ZERO_DOSE_BY_FACILITY_AGE_BAND",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}},{\"range\":{\"Data.additionalDetails.age\":{\"gte\":0,\"lt\":12}}}]}},\"aggs\":{\"0-11 Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Age0_11\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}},{\"range\":{\"Data.additionalDetails.age\":{\"gte\":12,\"lt\":24}}}]}},\"aggs\":{\"12-23 Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Age12_23\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}},{\"range\":{\"Data.additionalDetails.age\":{\"gte\":24,\"lt\":60}}}]}},\"aggs\":{\"24-59 Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_key\":\"asc\"}},\"aggs\":{\"Age24_59\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": null,
+    "isCumulative": null,
+    "plotLabel": "Health Facility",
+    "excludedColumns": [
+      "S.N.",
+      "Age0_11",
+      "Age12_23",
+      "Age24_59"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Age0_11"
+        ],
+        "newField": "0 to 11 Months",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Age12_23"
+        ],
+        "newField": "12 to 23 Months",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "Age24_59"
+        ],
+        "newField": "24 to 59 Months",
+        "_comments": ""
+      }
+    ],
+    "hideInsights": true,
+    "hideHeaderDenomination": true
+  },
+  "zeroDoseByFacilityGender": {
+    "chartName": "DSS_HEALTH_ZERO_DOSE_BY_FACILITY_GENDER",
+    "queries": [
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}},{\"term\":{\"Data.additionalDetails.gender.keyword\":\"MALE\"}}]}},\"aggs\":{\"Male Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"MaleCount\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      },
+      {
+        "module": "COMMON",
+        "dateRefField": "Data.taskDates",
+        "requestQueryMap": "{\"projectTypeId\":\"Data.projectTypeId.keyword\",\"region\":\"Data.boundaryHierarchy.region.keyword\",\"district\":\"Data.boundaryHierarchy.district.keyword\",\"campaignNumber\":\"Data.campaignNumber.keyword\"}",
+        "indexName": "chad-project-task-index-v1",
+        "aggrQuery": "{\"size\":0,\"aggs\":{\"AGGR\":{\"filter\":{\"bool\":{\"must\":[{\"term\":{\"Data.additionalDetails.receivedOPVBefore.keyword\":\"NO\"}},{\"term\":{\"Data.additionalDetails.gender.keyword\":\"FEMALE\"}}]}},\"aggs\":{\"Female Facility\":{\"terms\":{\"field\":\"Data.boundaryHierarchy.healthFacility.keyword\",\"size\":500,\"order\":{\"_count\":\"desc\"}},\"aggs\":{\"FemaleCount\":{\"value_count\":{\"field\":\"Data.id.keyword\"}}}}}}}}"
+      }
+    ],
+    "chartType": "xtable",
+    "valueType": "number",
+    "drillChart": "none",
+    "documentType": "_doc",
+    "action": "",
+    "aggregationPaths": null,
+    "isCumulative": null,
+    "plotLabel": "Health Facility",
+    "excludedColumns": [
+      "S.N.",
+      "MaleCount",
+      "FemaleCount"
+    ],
+    "computedFields": [
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "MaleCount"
+        ],
+        "newField": "Male",
+        "_comments": ""
+      },
+      {
+        "postAggregationTheory": "",
+        "actionName": "AdditiveComputedField",
+        "fields": [
+          "FemaleCount"
+        ],
+        "newField": "Female",
         "_comments": ""
       }
     ],
