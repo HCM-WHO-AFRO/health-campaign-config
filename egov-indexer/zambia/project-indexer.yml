@@ -1,0 +1,88 @@
+ServiceMaps:
+  serviceName: Project Service
+  version: 1.0.0
+  mappings:
+  - topic: zambia-transformer-producer-bulk-project-index-v1-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-project-index-v1
+      type: projects
+      id: $.id
+      isBulk: true
+      jsonPath: $
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+        - inJsonPath: $
+          outJsonPath: $.Data
+      timeStampField: $.lastModifiedTime
+  - topic: zambia-transformer-producer-project-beneficiary-index-v1-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-project-beneficiary-index-v1
+      type: project-beneficiary
+      id: $.projectBeneficiary.clientReferenceId,$.projectBeneficiary.beneficiaryClientReferenceId,$.projectBeneficiary.tenantId
+      isBulk: true
+      jsonPath: $
+      customJsonMapping:
+        indexMapping:
+          Data: { }
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.projectBeneficiary.clientAuditDetails.createdTime
+  - topic: zambia-save-project-resource-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-project-resource-index-v1
+      type: project-resource
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.createdTime
+  - topic: zambia-update-project-resource-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-project-resource-index-v1
+      type: project-resource
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.lastModifiedTime
+  - topic: zambia-delete-project-resource-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-project-resource-index-v1
+      type: project-resource
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.lastModifiedTime
+  - topic: zambia-save-project-facility-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-project-facility-index-v1
+      type: project-facility
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.createdTime
+  - topic: zambia-update-project-facility-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-project-facility-index-v1
+      type: project-facility
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.lastModifiedTime
+  - topic: zambia-delete-project-facility-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-project-facility-index-v1
+      type: project-facility
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.lastModifiedTime

@@ -1,0 +1,22 @@
+ServiceMaps:
+  serviceName: facility
+  version: 1.0.0
+  mappings:
+  - topic: zambia-save-facility-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-facility-index-v1
+      type: facility
+      id: $.clientReferenceId
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.createdTime
+  - topic: zambia-update-facility-topic
+    configKey: INDEX
+    indexes:
+    - name: zambia-facility-index-v1
+      type: facility
+      id: $.clientReferenceId
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.lastModifiedTime

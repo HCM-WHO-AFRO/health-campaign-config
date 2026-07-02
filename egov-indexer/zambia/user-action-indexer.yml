@@ -1,0 +1,46 @@
+ServiceMaps:
+  serviceName: project
+  version: 1.0.0
+  mappings:
+    - topic: zambia-transformer-producer-user-action-index-v1-topic
+      configKey: INDEX
+      indexes:
+        - name: zambia-user-action-index-v1
+          type: UserAction
+          id: $.id
+          isBulk: true
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: { "Data": {} }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
+          timeStampField: $.userAction.clientAuditDetails.lastModifiedTime
+    - topic: zambia-transformer-producer-user-action-index-v1-topic-location-capture
+      configKey: INDEX
+      indexes:
+        - name: zambia-user-action-location-capture-index-v1
+          type: UserAction
+          id: $.userAction.id
+          isBulk: true
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: { "Data": {} }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
+          timeStampField: $.userAction.clientAuditDetails.lastModifiedTime
+    - topic: zambia-transformer-producer-user-action-index-v1-topic-other
+      configKey: INDEX
+      indexes:
+        - name: zambia-user-action-other-index-v1
+          type: UserAction
+          id: $.userAction.id
+          isBulk: true
+          jsonPath: $
+          customJsonMapping:
+            indexMapping: { "Data": {} }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
+          timeStampField: $.userAction.clientAuditDetails.lastModifiedTime
