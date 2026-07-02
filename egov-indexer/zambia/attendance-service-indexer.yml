@@ -1,0 +1,85 @@
+ServiceMaps:
+  serviceName: attendance-service
+  version: 1.0.0
+  mappings:
+  - topic: zambia-save-attendance
+    configKey: INDEX
+    indexes:
+    - name: zambia-attendance-index-v1
+      type: attendance
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.createdTime
+  - topic: zambia-update-attendance
+    configKey: INDEX
+    indexes:
+    - name: zambia-attendance-index-v1
+      type: attendance
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.lastModifiedTime
+  - topic: zambia-save-attendee
+    configKey: INDEX
+    indexes:
+    - name: zambia-attendee-index-v1
+      type: attendee
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.createdTime
+  - topic: zambia-update-attendee
+    configKey: INDEX
+    indexes:
+    - name: zambia-attendee-index-v1
+      type: attendee
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.lastModifiedTime
+  - topic: zambia-save-staff
+    configKey: INDEX
+    indexes:
+    - name: zambia-staff-index-v1
+      type: staff
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.createdTime
+  - topic: zambia-update-staff
+    configKey: INDEX
+    indexes:
+    - name: zambia-staff-index-v1
+      type: staff
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.auditDetails.lastModifiedTime
+  - topic: zambia-transformer-save-attendance-register
+    configKey: INDEX
+    indexes:
+    - name: zambia-transformed-attendance-register-index-v1
+      type: attendance-register
+      id: $.attendanceRegister.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.attendanceRegister.auditDetails.lastModifiedTime
+  - topic: zambia-transformer-save-attendance-log
+    configKey: INDEX
+    indexes:
+    - name: zambia-attendance-log-index-v1
+      type: attendance-log
+      id: $.attendanceLog.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.attendanceLog.auditDetails.lastModifiedTime
+  - topic: zambia-update-attendance-log
+    configKey: INDEX
+    indexes:
+    - name: zambia-attendance-log-index-v1
+      type: attendance-log
+      id: $.id
+      isBulk: true
+      jsonPath: $.*
+      timeStampField: $.time
