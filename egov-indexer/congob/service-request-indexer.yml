@@ -24,8 +24,10 @@ ServiceMaps:
       jsonPath: $
       customJsonMapping:
         indexMapping:
-          Data: {}
+          Data: { additionalDetails: {} }
         fieldMapping:
+        - inJsonPath: $.id
+          outJsonPath: $.Data.checklistId
         - inJsonPath: $.createdBy
           outJsonPath: $.Data.syncedUserId
         - inJsonPath: $.userName
@@ -44,6 +46,14 @@ ServiceMaps:
           outJsonPath: $.Data.@timestamp
         - inJsonPath: $.taskDates
           outJsonPath: $.Data.taskDates
+        - inJsonPath: $.geoPoint
+          outJsonPath: $.Data.geoPoint
+        - inJsonPath: $.campaignNumber
+          outJsonPath: $.Data.campaignNumber
+        - inJsonPath: $.campaignId
+          outJsonPath: $.Data.campaignId
+        - inJsonPath: $.additionalDetails.cycleIndex
+          outJsonPath: $.Data.additionalDetails.cycleIndex
         - inJsonPath: $.userAddress
           outJsonPath: $.Data.userAddress
         - inJsonPath: $.additionalDetails
