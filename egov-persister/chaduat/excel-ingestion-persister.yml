@@ -98,7 +98,7 @@ serviceMaps:
       fromTopic: chaduat-save-sheet-data-temp
       isTransaction: true
       queryMaps:
-        - query: INSERT INTO chaduat.eg_ex_in_sheet_data_temp(referenceId, tenantId, fileStoreId, sheetName, rowNumber, rowJson, createdBy, createdTime, deleteTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT (referenceId, fileStoreId, sheetName, rowNumber) DO UPDATE SET tenantId = EXCLUDED.tenantId, rowJson = EXCLUDED.rowJson, createdBy = EXCLUDED.createdBy, createdTime = EXCLUDED.createdTime, deleteTime = EXCLUDED.deleteTime;
+        - query: INSERT INTO chaduat.eg_ex_in_sheet_data_temp(referenceId, tenantId, fileStoreId, sheetName, rowNumber, rowJson, createdBy, createdTime, deleteTime) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
           basePath: sheetData.*
           jsonMaps:
             - jsonPath: $.sheetData.*.referenceId

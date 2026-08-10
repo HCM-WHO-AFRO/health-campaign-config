@@ -19,15 +19,13 @@ ServiceMaps:
       timeStampField: $.referral.auditDetails.createdTime
     - name: chad-user-sync-index-v1
       type: users
-      id: $.referral.id
+      id: $.referral.id,$.referral.tenantId
       isBulk: true
       jsonPath: $
       customJsonMapping:
         indexMapping:
-          Data: { additionalDetails: {} }
+          Data: {}
         fieldMapping:
-        - inJsonPath: $.referral.id
-          outJsonPath: $.Data.referralId
         - inJsonPath: $.referral.clientAuditDetails.createdBy
           outJsonPath: $.Data.syncedUserId
         - inJsonPath: $.userName
@@ -42,18 +40,12 @@ ServiceMaps:
           outJsonPath: $.Data.createdTime
         - inJsonPath: $.@timestamp
           outJsonPath: $.Data.syncedTimeStamp
+        - inJsonPath: $.@timestamp
+          outJsonPath: $.Data.@timestamp
         - inJsonPath: $.taskDates
           outJsonPath: $.Data.taskDates
         - inJsonPath: $.syncedDate
           outJsonPath: $.Data.syncedDate
-        - inJsonPath: $.campaignNumber
-          outJsonPath: $.Data.campaignNumber
-        - inJsonPath: $.campaignId
-          outJsonPath: $.Data.campaignId
-        - inJsonPath: $.additionalDetails.cycleIndex
-          outJsonPath: $.Data.additionalDetails.cycleIndex
-        - inJsonPath: $.@timestamp
-          outJsonPath: $.Data.@timestamp
         - inJsonPath: $.userAddress
           outJsonPath: $.Data.userAddress
       timeStampField: $.referral.auditDetails.lastModifiedTime
@@ -138,42 +130,6 @@ ServiceMaps:
         fieldMapping:
         - inJsonPath: $
           outJsonPath: $.Data
-      timeStampField: $.hfReferral.clientAuditDetails.lastModifiedTime
-    - name: chad-user-sync-index-v1
-      type: users
-      id: $.hfReferral.id
-      isBulk: true
-      jsonPath: $
-      customJsonMapping:
-        indexMapping:
-          Data: { additionalDetails: {} }
-        fieldMapping:
-          - inJsonPath: $.hfReferral.id
-            outJsonPath: $.Data.hfReferralId
-          - inJsonPath: $.hfReferral.clientAuditDetails.createdBy
-            outJsonPath: $.Data.syncedUserId
-          - inJsonPath: $.userName
-            outJsonPath: $.Data.syncedUserName
-          - inJsonPath: $.role
-            outJsonPath: $.Data.role
-          - inJsonPath: $.boundaryHierarchy
-            outJsonPath: $.Data.boundaryHierarchy
-          - inJsonPath: $.hfReferral.clientAuditDetails.createdTime
-            outJsonPath: $.Data.clientCreatedTime
-          - inJsonPath: $.hfReferral.auditDetails.lastModifiedTime
-            outJsonPath: $.Data.createdTime
-          - inJsonPath: $.taskDates
-            outJsonPath: $.Data.taskDates
-          - inJsonPath: $.@timestamp
-            outJsonPath: $.Data.syncedTimeStamp
-          - inJsonPath: $.syncedDate
-            outJsonPath: $.Data.syncedDate
-          - inJsonPath: $.campaignNumber
-            outJsonPath: $.Data.campaignNumber
-          - inJsonPath: $.campaignId
-            outJsonPath: $.Data.campaignId
-          - inJsonPath: $.additionalDetails.cycleIndex
-            outJsonPath: $.Data.additionalDetails.cycleIndex
       timeStampField: $.hfReferral.clientAuditDetails.lastModifiedTime
   - topic: chad-delete-hfreferral-topic
     configKey: INDEX

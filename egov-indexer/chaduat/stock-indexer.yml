@@ -7,7 +7,7 @@ ServiceMaps:
     indexes:
     - name: chaduat-stock-index-v1
       type: stock
-      id: $.clientReferenceId,$.tenantId
+      id: $.id,$.tenantId
       isBulk: true
       jsonPath: $
       customJsonMapping:
@@ -24,10 +24,8 @@ ServiceMaps:
       jsonPath: $
       customJsonMapping:
         indexMapping:
-          Data: { additionalDetails: {} }
+          Data: {}
         fieldMapping:
-        - inJsonPath: $.id
-          outJsonPath: $.Data.stockId
         - inJsonPath: $.createdBy
           outJsonPath: $.Data.syncedUserId
         - inJsonPath: $.userName
@@ -48,12 +46,6 @@ ServiceMaps:
           outJsonPath: $.Data.taskDates
         - inJsonPath: $.syncedDate
           outJsonPath: $.Data.syncedDate
-        - inJsonPath: $.campaignNumber
-          outJsonPath: $.Data.campaignNumber
-        - inJsonPath: $.campaignId
-          outJsonPath: $.Data.campaignId
-        - inJsonPath: $.additionalDetails.cycleIndex
-          outJsonPath: $.Data.additionalDetails.cycleIndex
         - inJsonPath: $.userAddress
           outJsonPath: $.Data.userAddress
         - inJsonPath: $.additionalDetails
