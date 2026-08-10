@@ -44,21 +44,6 @@ ServiceMaps:
       isBulk: true
       jsonPath: $.*
       timeStampField: $.auditDetails.lastModifiedTime
-  - topic: congob-transformer-producer-project-beneficiary-index-v1-topic
-    configKey: INDEX
-    indexes:
-    - name: congob-project-beneficiary-index-v1
-      type: project-beneficiary
-      id: $.projectBeneficiary.clientReferenceId,$.projectBeneficiary.beneficiaryClientReferenceId,$.projectBeneficiary.tenantId
-      isBulk: true
-      jsonPath: $
-      customJsonMapping:
-        indexMapping:
-          Data: { }
-        fieldMapping:
-          - inJsonPath: $
-            outJsonPath: $.Data
-      timeStampField: $.projectBeneficiary.clientAuditDetails.createdTime
   - topic: congob-save-project-resource-topic
     configKey: INDEX
     indexes:
