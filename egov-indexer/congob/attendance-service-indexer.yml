@@ -2,6 +2,66 @@ ServiceMaps:
   serviceName: attendance-service
   version: 1.0.0
   mappings:
+  - topic: congob-transformer-producer-attendee-index
+    configKey: INDEX
+    indexes:
+    - name: congob-attendee-index-v1
+      type: attendee
+      id: $.attendee.id
+      isBulk: true
+      jsonPath: $.*
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.attendee.auditDetails.createdTime
+  - topic: congob-transformer-producer-attendance-staff-index
+    configKey: INDEX
+    indexes:
+    - name: congob-staff-index-v1
+      type: staff
+      id: $.staff.id
+      isBulk: true
+      jsonPath: $.*
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.staff.auditDetails.createdTime
+  - topic: congob-transformer-save-attendance-register
+    configKey: INDEX
+    indexes:
+    - name: congob-transformed-attendance-register-index-v1
+      type: attendance-register
+      id: $.attendanceRegister.id
+      isBulk: true
+      jsonPath: $.*
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.attendanceRegister.auditDetails.lastModifiedTime
+  - topic: congob-transformer-save-attendance-log
+    configKey: INDEX
+    indexes:
+    - name: congob-attendance-log-index-v1
+      type: attendance-log
+      id: $.attendanceLog.id
+      isBulk: true
+      jsonPath: $.*
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.attendanceLog.auditDetails.lastModifiedTime
   - topic: congob-save-attendance
     configKey: INDEX
     indexes:
