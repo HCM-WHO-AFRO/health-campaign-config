@@ -726,7 +726,7 @@
                   "name": "DASHBOARD_MAP_SUCCESSFUL_ADMINISTRATIONS",
                   "code": "",
                   "moduleName": "iccd-maps",
-                  "pageName": "taraba-successful-administrations-map",
+                  "pageName": "chaduat-successful-administrations-map",
                   "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
@@ -752,7 +752,7 @@
                   "name": "DASHBOARD_MAP_UNSUCCESSFUL_ADMINISTRATIONS",
                   "code": "",
                   "moduleName": "iccd-maps",
-                  "pageName": "taraba-unsuccessful-administrations-map",
+                  "pageName": "chaduat-unsuccessful-administrations-map",
                   "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
@@ -1133,7 +1133,7 @@
                   "name": "DASHBOARD_TEAM_PERFORMNACE",
                   "code": "",
                   "moduleName": "iccd-maps",
-                  "pageName": "taraba-team-performance-summary",
+                  "pageName": "chaduat-team-performance-summary",
                   "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
@@ -1298,7 +1298,7 @@
                   "name": "DASHBOARD_REFERRAL_SUMMARY",
                   "code": "",
                   "moduleName": "iccd-maps",
-                  "pageName": "taraba-referral-summary",
+                  "pageName": "chaduat-referral-summary",
                   "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
@@ -1325,7 +1325,7 @@
                   "name": "DASHBOARD_ADMINISTRATION_SUMMARY",
                   "code": "",
                   "moduleName": "iccd-maps",
-                  "pageName": "taraba-administration-summary",
+                  "pageName": "chaduat-administration-summary",
                   "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
@@ -1351,7 +1351,7 @@
                   "name": "DASHBOARD_SYNC_HISTOGRAM",
                   "code": "",
                   "moduleName": "iccd-maps",
-                  "pageName": "taraba-sync-histogram",
+                  "pageName": "chaduat-sync-histogram",
                   "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
@@ -1378,7 +1378,7 @@
                   "name": "DASHBOARD_COHORT_CHARTS",
                   "code": "",
                   "moduleName": "iccd-maps",
-                  "pageName": "taraba-cohort-charts",
+                  "pageName": "chaduat-cohort-charts",
                   "chartType": "kibanaComponent",
                   "filter": "",
                   "headers": []
