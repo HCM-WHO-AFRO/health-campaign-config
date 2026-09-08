@@ -16481,7 +16481,7 @@
         "indexName": "chaduat-stock-index-v1",
         "transformData": "rawDocuments",
         "transformKey": "stockDataTransformer",
-        "aggrQuery": "{\"size\":18000,\"query\":{\"bool\":{\"must_not\":[{\"range\":{\"Data.createdTime\":{\"lte\":1786213800000}}}]}},\"_source\":[\"Data.*\"],\"aggs\":{\"by_event_type\":{\"terms\":{\"field\":\"Data.eventType.keyword\",\"size\":20},\"aggs\":{\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}},\"by_product\":{\"terms\":{\"field\":\"Data.productName.keyword\",\"size\":100},\"aggs\":{\"by_event_type\":{\"terms\":{\"field\":\"Data.eventType.keyword\",\"size\":20},\"aggs\":{\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}},\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}},\"unique_facilities\":{\"cardinality\":{\"field\":\"Data.facilityId.keyword\"}},\"by_facility\":{\"terms\":{\"field\":\"Data.facilityId.keyword\",\"size\":500},\"aggs\":{\"facility_name\":{\"terms\":{\"field\":\"Data.facilityName.keyword\",\"size\":1}},\"by_event_type\":{\"terms\":{\"field\":\"Data.eventType.keyword\",\"size\":20},\"aggs\":{\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}}}},\"by_projectId\":{\"terms\":{\"field\":\"Data.projectId.keyword\",\"size\":20}},\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}}"
+        "aggrQuery": "{\"size\":10000,\"query\":{\"bool\":{\"must_not\":[{\"range\":{\"Data.createdTime\":{\"lte\":1786213800000}}}]}},\"_source\":[\"Data.*\"],\"aggs\":{\"by_event_type\":{\"terms\":{\"field\":\"Data.eventType.keyword\",\"size\":20},\"aggs\":{\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}},\"by_product\":{\"terms\":{\"field\":\"Data.productName.keyword\",\"size\":100},\"aggs\":{\"by_event_type\":{\"terms\":{\"field\":\"Data.eventType.keyword\",\"size\":20},\"aggs\":{\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}},\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}},\"unique_facilities\":{\"cardinality\":{\"field\":\"Data.facilityId.keyword\"}},\"by_facility\":{\"terms\":{\"field\":\"Data.facilityId.keyword\",\"size\":500},\"aggs\":{\"facility_name\":{\"terms\":{\"field\":\"Data.facilityName.keyword\",\"size\":1}},\"by_event_type\":{\"terms\":{\"field\":\"Data.eventType.keyword\",\"size\":20},\"aggs\":{\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}}}},\"by_projectId\":{\"terms\":{\"field\":\"Data.projectId.keyword\",\"size\":20}},\"total_quantity\":{\"sum\":{\"field\":\"Data.physicalCount\"}}}}"
       }
     ],
     "chartType": "rawResponse",
@@ -16655,7 +16655,7 @@
         "indexName": "chaduat-stock-index-v1",
         "transformData": "rawDocuments",
         "transformKey": "stockBalanceTransformer",
-        "aggrQuery": "{\"size\":18000,\"query\":{\"bool\":{\"must_not\":[{\"range\":{\"Data.createdTime\":{\"lte\":1786213800000}}}]}},\"_source\":[\"Data.facilityId\",\"Data.transactingFacilityId\",\"Data.eventType\",\"Data.physicalCount\",\"Data.productVariant\",\"Data.productName\",\"Data.additionalDetails.stockEntryType\",\"Data.additionalDetails.status\",\"Data.campaignId\",\"Data.facilityName\",\"Data.transactingFacilityName\",\"Data.id\",\"Data.dateOfEntry\",\"Data.createdTime\",\"Data.nameOfUser\",\"Data.userName\", \"Data.boundaryHierarchyCode\"]}"
+        "aggrQuery": "{\"size\":10000,\"query\":{\"bool\":{\"must_not\":[{\"range\":{\"Data.createdTime\":{\"lte\":1786213800000}}}]}},\"_source\":[\"Data.facilityId\",\"Data.transactingFacilityId\",\"Data.eventType\",\"Data.physicalCount\",\"Data.productVariant\",\"Data.productName\",\"Data.additionalDetails.stockEntryType\",\"Data.additionalDetails.status\",\"Data.campaignId\",\"Data.facilityName\",\"Data.transactingFacilityName\",\"Data.id\",\"Data.dateOfEntry\",\"Data.createdTime\",\"Data.nameOfUser\",\"Data.userName\", \"Data.boundaryHierarchyCode\"]}"
       }
     ],
     "chartType": "rawResponse",
@@ -16704,7 +16704,7 @@
         "indexName": "chaduat-stock-index-v1",
         "transformData": "rawDocuments",
         "transformKey": "facilityStockTransformer",
-        "aggrQuery": "{\"size\":18000,\"_source\":[\"Data.facilityId\",\"Data.transactingFacilityId\",\"Data.eventType\",\"Data.physicalCount\",\"Data.productVariant\",\"Data.productName\",\"Data.additionalDetails.stockEntryType\",\"Data.additionalDetails.status\",\"Data.campaignId\",\"Data.facilityName\",\"Data.transactingFacilityName\",\"Data.id\"]}"
+        "aggrQuery": "{\"size\":10000,\"_source\":[\"Data.facilityId\",\"Data.transactingFacilityId\",\"Data.eventType\",\"Data.physicalCount\",\"Data.productVariant\",\"Data.productName\",\"Data.additionalDetails.stockEntryType\",\"Data.additionalDetails.status\",\"Data.campaignId\",\"Data.facilityName\",\"Data.transactingFacilityName\",\"Data.id\"]}"
       },
       {
         "module": "COMMON",
