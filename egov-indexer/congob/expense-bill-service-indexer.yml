@@ -1,0 +1,52 @@
+ServiceMaps:
+  serviceName: Billing Service
+  version: 1.0.0
+  mappings:
+    - topic: congob-transformer-bill-index-topic
+      configKey: INDEX
+      indexes:
+        - name: congob-transform-bill-index-v1
+          type: bill
+          id: $.bill.id
+          isBulk: false
+          jsonPath: $
+          customJsonMapping:
+            indexMapping:
+              Data: {}
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
+          timeStampField: $.bill.auditDetails.lastModifiedTime
+
+    - topic: congob-transformer-billdetail-index-topic
+      configKey: INDEX
+      indexes:
+        - name: congob-transform-billdetail-index-v1
+          type: billdetail
+          id: $.id
+          isBulk: true
+          jsonPath: $
+          customJsonMapping:
+            indexMapping:
+              Data: { }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
+          timeStampField: $.billDetail.auditDetails.lastModifiedTime
+
+    - topic: congob-transformer-billreport-index-topic
+      configKey: INDEX
+      indexes:
+        - name: congob-transform-billreport-index-v1
+          type: billreport
+          id: $.billReport.id
+          isBulk: false
+          jsonPath: $
+          customJsonMapping:
+            indexMapping:
+              Data: { }
+            fieldMapping:
+              - inJsonPath: $
+                outJsonPath: $.Data
+          timeStampField: $.billReport.auditDetails.lastModifiedTime
+
