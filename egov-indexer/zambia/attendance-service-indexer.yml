@@ -2,6 +2,66 @@ ServiceMaps:
   serviceName: attendance-service
   version: 1.0.0
   mappings:
+  - topic: zambia-transformer-producer-attendee-index
+    configKey: INDEX
+    indexes:
+    - name: zambia-attendee-index-v1
+      type: attendee
+      id: $.attendee.id
+      isBulk: true
+      jsonPath: $.*
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.attendee.auditDetails.createdTime
+  - topic: zambia-transformer-producer-attendance-staff-index
+    configKey: INDEX
+    indexes:
+    - name: zambia-staff-index-v1
+      type: staff
+      id: $.staff.id
+      isBulk: true
+      jsonPath: $.*
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.staff.auditDetails.createdTime
+  - topic: zambia-transformer-save-attendance-register
+    configKey: INDEX
+    indexes:
+    - name: zambia-transformed-attendance-register-index-v1
+      type: attendance-register
+      id: $.attendanceRegister.id
+      isBulk: true
+      jsonPath: $.*
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.attendanceRegister.auditDetails.lastModifiedTime
+  - topic: zambia-transformer-save-attendance-log
+    configKey: INDEX
+    indexes:
+    - name: zambia-attendance-log-index-v1
+      type: attendance-log
+      id: $.attendanceLog.id
+      isBulk: true
+      jsonPath: $.*
+      customJsonMapping:
+        indexMapping:
+          Data: {}
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.attendanceLog.auditDetails.lastModifiedTime
   - topic: zambia-save-attendance
     configKey: INDEX
     indexes:

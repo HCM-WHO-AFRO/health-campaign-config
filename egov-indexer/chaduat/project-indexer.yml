@@ -44,6 +44,21 @@ ServiceMaps:
       isBulk: true
       jsonPath: $.*
       timeStampField: $.auditDetails.lastModifiedTime
+  - topic: chaduat-transformer-producer-project-beneficiary-index-v1-topic
+    configKey: INDEX
+    indexes:
+    - name: chaduat-project-beneficiary-index-v1
+      type: project-beneficiary
+      id: $.projectBeneficiary.clientReferenceId,$.projectBeneficiary.beneficiaryClientReferenceId,$.projectBeneficiary.tenantId
+      isBulk: true
+      jsonPath: $
+      customJsonMapping:
+        indexMapping:
+          Data: { }
+        fieldMapping:
+          - inJsonPath: $
+            outJsonPath: $.Data
+      timeStampField: $.projectBeneficiary.clientAuditDetails.createdTime
   - topic: chaduat-save-project-resource-topic
     configKey: INDEX
     indexes:

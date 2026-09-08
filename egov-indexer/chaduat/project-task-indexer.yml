@@ -24,8 +24,10 @@ ServiceMaps:
       jsonPath: $
       customJsonMapping:
         indexMapping:
-          Data: {}
+          Data: { additionalDetails: {} }
         fieldMapping:
+        - inJsonPath: $.taskId
+          outJsonPath: $.Data.taskId
         - inJsonPath: $.createdBy
           outJsonPath: $.Data.syncedUserId
         - inJsonPath: $.userName
@@ -40,12 +42,18 @@ ServiceMaps:
           outJsonPath: $.Data.createdTime
         - inJsonPath: $.syncedTimeStamp
           outJsonPath: $.Data.syncedTimeStamp
-        - inJsonPath: $.@timestamp
-          outJsonPath: $.Data.@timestamp
         - inJsonPath: $.taskDates
           outJsonPath: $.Data.taskDates
         - inJsonPath: $.syncedDate
           outJsonPath: $.Data.syncedDate
+        - inJsonPath: $.campaignNumber
+          outJsonPath: $.Data.campaignNumber
+        - inJsonPath: $.campaignId
+          outJsonPath: $.Data.campaignId
+        - inJsonPath: $.additionalDetails.cycleIndex
+          outJsonPath: $.Data.additionalDetails.cycleIndex
+        - inJsonPath: $.@timestamp
+          outJsonPath: $.Data.@timestamp
         - inJsonPath: $.userAddress
           outJsonPath: $.Data.userAddress
         - inJsonPath: $.additionalDetails
